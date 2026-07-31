@@ -5,7 +5,7 @@ import { useMemo, useState } from "react";
 import { DesignCard } from "@/components/DesignCard";
 import { Logo } from "@/components/Logo";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { allKeywords, designSystems, library } from "@/data/library";
+import { allKeywords, designSystems, libraryMeta } from "@/data/library";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -56,7 +56,7 @@ function Index() {
               Design DNA Library
             </span>
             <span className="hidden shrink-0 rounded-full border border-border px-2 py-0.5 font-mono text-[11px] text-muted-foreground sm:inline">
-              {library.version}
+              {libraryMeta.version}
             </span>
           </div>
           <ThemeToggle />
@@ -66,10 +66,10 @@ function Index() {
       <main className="mx-auto max-w-7xl px-5">
         <section className="animate-enter-up py-20 sm:py-28">
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-accent-soft">
-            {library.name} · {library.version}
+            {libraryMeta.name} · {libraryMeta.version}
           </p>
           <h1 className="mt-6 max-w-3xl font-display text-[34px] leading-[1.4] text-foreground sm:text-[48px]">
-            探索 {library.design_count} 个顶级设计系统
+            探索 {libraryMeta.design_count} 个顶级设计系统
           </h1>
           <p className="mt-5 max-w-2xl text-[15px] leading-[1.6] text-muted-foreground">
             每个方案都是一件可被探索的数字艺术品——完整的色彩体系、材质语言、排版秩序与动效叙事，
@@ -126,7 +126,7 @@ function Index() {
       <footer className="mt-12 border-t border-border">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-10 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <span>
-            {library.name} {library.version}
+            {libraryMeta.name} {libraryMeta.version}
           </span>
           <span>为全球顶级设计师与品牌打造的高级设计系统展示平台</span>
         </div>
