@@ -16,8 +16,21 @@ function block(title: string, obj: Record<string, string>): string {
   return `## ${title}\n\n${rows}\n`;
 }
 
+function flattenEntries(obj: Record<string, unknown>, prefix = ""): [string, string][] {
+  const out: [string, string][] = [];
+  for (const [k, v] of Object.entries(obj)) {
+    const key = prefix ? `${prefix}.${k}` : k;
+    if (typeof v === "string") {
+      out.push([key, v]);
+    } else if (v && typeof v === "object" && !Array.isArray(v)) {
+      out.push(...flattenEntries(v as Record<string, unknown>, key));
+    }
+  }
+  return out;
+}
+
 export function toMarkdown(d: DesignSystem): string {
-  const colorRows = Object.entries(d.color_system)
+  const colorRows = flattenEntries(d.color_system as Record<string, unknown>)
     .map(([k, v]) => `| ${k} | ${v} |`)
     .join("\n");
 
@@ -57,7 +70,8 @@ export function toMarkdown(d: DesignSystem): string {
 }
 
 export function toColors(d: DesignSystem): string {
-  const lines = Object.entries(d.color_system).map(([k, v]) => `${k}: ${v}`);
+  const lines = flattenEntries(d.color_system as Record<string, unknown>)
+    .map(([k, v]) => `${k}: ${v}`);
   const hexes = HEX_KEYS.map((k) => d.color_system[k]).join(", ");
   return [`/* ${d.id} · ${d.name} */`, ...lines, ``, `HEX: ${hexes}`].join("\n");
 }

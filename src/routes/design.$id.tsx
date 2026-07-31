@@ -131,7 +131,7 @@ function DesignDetail() {
           <SectionBlock id="color" title={FIELD_LABELS.color_system}>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
               {Object.entries(design.color_system)
-                .filter(([k]) => k !== "lighting")
+                .filter(([k, v]) => k !== "lighting" && typeof v === "string")
                 .map(([k, v]) => (
                   <button
                     key={k}
@@ -148,6 +148,34 @@ function DesignDetail() {
                 ))}
             </div>
             <p className="mt-4 text-[14px] leading-[1.6]">{design.color_system.lighting}</p>
+
+            {(() => {
+              const tcs = (design.color_system as Record<string, unknown>).time_color_system;
+              if (!tcs || typeof tcs !== "object" || Array.isArray(tcs)) return null;
+              return (
+                <>
+                  <h4 className="mt-6 mb-3 text-sm font-medium text-foreground">
+                    时间色彩系统 Time Color System
+                  </h4>
+                  <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                    {Object.entries(tcs as Record<string, string>).map(([k, v]) => (
+                      <button
+                        key={k}
+                        type="button"
+                        onClick={() => navigator.clipboard?.writeText(v)}
+                        className="overflow-hidden rounded-xl border border-border text-left transition-transform duration-200 hover:-translate-y-1"
+                      >
+                        <span className="block h-16 w-full" style={{ backgroundColor: v }} />
+                        <span className="block bg-surface px-3 py-2">
+                          <span className="block font-mono text-[11px] text-muted-foreground">{k}</span>
+                          <span className="block font-mono text-[13px] text-foreground">{v}</span>
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                </>
+              );
+            })()}
           </SectionBlock>
 
           <SectionBlock id="material" title={FIELD_LABELS.material_language}>
