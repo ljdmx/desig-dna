@@ -5,7 +5,7 @@ import { ColorSwatchRow } from "@/components/ColorSwatchRow";
 import { CopyButton } from "@/components/CopyButton";
 import { FieldList, SectionBlock } from "@/components/SectionBlock";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { FIELD_LABELS, getDesign } from "@/data/library";
+import { FIELD_LABELS, getDesign, type DesignSystem } from "@/data/library";
 import { toColors, toJson, toMarkdown } from "@/lib/export";
 
 export const Route = createFileRoute("/design/$id")({
@@ -49,7 +49,7 @@ const SECTIONS = [
 ] as const;
 
 function DesignDetail() {
-  const { design } = Route.useLoaderData();
+  const { design } = Route.useLoaderData() as { design: DesignSystem };
 
   return (
     <div className="min-h-screen bg-background">

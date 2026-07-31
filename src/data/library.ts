@@ -34,6 +34,7 @@ export type Library = {
 };
 
 export const library = raw as unknown as Library;
+export const libraryMeta = library.library;
 export const designSystems = library.design_systems;
 
 export const getDesign = (id: string) =>
