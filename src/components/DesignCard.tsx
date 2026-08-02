@@ -5,11 +5,19 @@ import { CopyButton } from "@/components/CopyButton";
 import type { DesignSystem } from "@/data/library";
 import { toColors, toJson, toMarkdown } from "@/lib/export";
 
-export function DesignCard({ design, index }: { design: DesignSystem; index: number }) {
+export function DesignCard({
+  design,
+  index,
+  version,
+}: {
+  design: DesignSystem;
+  index: number;
+  version: string;
+}) {
   return (
     <Link
-      to="/design/$id"
-      params={{ id: design.id }}
+      to="/design/$version/$id"
+      params={{ version, id: design.id }}
       className="group relative block animate-enter-up rounded-2xl border border-border bg-surface p-6 transition-all duration-200 hover:-translate-y-1 hover:border-accent/50 hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       style={{ animationDelay: `${Math.min(index, 12) * 40}ms` }}
     >
@@ -25,9 +33,7 @@ export function DesignCard({ design, index }: { design: DesignSystem; index: num
           </span>
         </div>
 
-        <h3 className="mt-4 font-display text-xl leading-[1.4] text-foreground">
-          {design.name}
-        </h3>
+        <h3 className="mt-4 font-display text-xl leading-[1.4] text-foreground">{design.name}</h3>
 
         <p className="mt-3 line-clamp-3 text-sm leading-[1.6] text-muted-foreground">
           {design.design_philosophy}
