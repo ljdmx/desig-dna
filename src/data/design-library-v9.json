@@ -9775,180 +9775,191 @@
         }
     ],
     "optimization_framework": {
-        "principle": "Transform luxury concepts into adaptive executable experience systems",
+        "principle": "将设计概念转化为具有品牌价值、用户体验与商业质量的高级数字体验系统",
         "design_intelligence_layer": {
+            "purpose": "建立从品牌意图到最终体验质量的设计决策链",
             "brand_intent_engine": {
-                "purpose": "Translate abstract brand philosophy into measurable visual decisions",
+                "purpose": "将抽象目标转化为可执行设计标准",
                 "inputs": [
-                    "brand_history",
-                    "cultural_context",
-                    "target_emotion",
-                    "audience_psychology"
+                    "brand_objective",
+                    "user_need",
+                    "business_goal",
+                    "experience_expectation"
                 ],
                 "outputs": [
-                    "visual_language",
-                    "spatial_behavior",
-                    "motion_personality",
-                    "material_identity"
+                    "design_strategy",
+                    "experience_goal",
+                    "evaluation_standard"
                 ]
             },
-            "perception_model": {
-                "principle": "Design according to human perception hierarchy",
-                "layers": [
-                    {
-                        "level": "01_visual_capture",
-                        "time": "0-3 seconds",
-                        "goal": "Establish uniqueness and emotional positioning"
-                    },
-                    {
-                        "level": "02_attention_guidance",
-                        "time": "3-15 seconds",
-                        "goal": "Control visual journey and information discovery"
-                    },
-                    {
-                        "level": "03_emotional_memory",
-                        "time": "15+ seconds",
-                        "goal": "Create brand attachment and recall"
-                    }
-                ]
-            }
-        },
-        "color_system": {
-            "principle": "Emotion driven color architecture with spatial behavior",
-            "color_roles": {
-                "identity_color": "Brand recognition",
-                "emotion_color": "Psychological atmosphere",
-                "material_color": "Physical realism",
-                "interaction_color": "Feedback and state change"
-            },
-            "dynamic_environment": {
-                "ambient_light_behavior": {
-                    "morning": "soft low contrast illumination",
-                    "day": "neutral accurate rendering",
-                    "night": "deep contrast cinematic mood"
-                },
-                "color_transition": "smooth emotional gradient instead of decorative animation"
-            }
-        },
-        "typography_system": {
-            "principle": "Typography as spatial architecture",
-            "rules": {
-                "hierarchy": "Title → Narrative → Detail → Interaction",
-                "font_personality": [
-                    "heritage",
-                    "modern",
-                    "technical",
-                    "humanistic"
+            "design_reasoning_model": {
+                "principle": "每一个设计选择必须具有明确理由",
+                "decision_chain": [
+                    "Why exists",
+                    "Why here",
+                    "Why this form",
+                    "Why this interaction"
                 ],
-                "cjk_optimization": {
-                    "line_height": "1.6-2.0",
-                    "letter_spacing": "adaptive",
-                    "collision_prevention": true
+                "rejection_rule": "无法解释设计目的的元素自动降低评价"
+            }
+        },
+        "perception_system": {
+            "principle": "根据人类认知规律建立体验节奏",
+            "experience_layers": [
+                {
+                    "level": "01_attention",
+                    "goal": "快速建立识别与兴趣"
+                },
+                {
+                    "level": "02_understanding",
+                    "goal": "降低认知成本并增强探索"
+                },
+                {
+                    "level": "03_emotion",
+                    "goal": "形成长期记忆与价值认同"
                 }
-            }
-        },
-        "layout_system": {
-            "engine": "Dynamic Spatial Composition",
-            "base_grid": "12-column",
-            "advanced_rules": {
-                "controlled_asymmetry": "70% order + 30% tension",
-                "negative_space_ratio": "35%-60%",
-                "visual_anchor": "one dominant attention point per viewport"
-            },
-            "spatial_rhythm": {
-                "density_curve": "10% → 35% → 75% → 45% → 15%",
-                "principle": "Reveal information like cinematic storytelling"
-            }
-        },
-        "motion_system": {
-            "principle": "Motion must represent physical laws and emotional rhythm",
-            "forbidden": [
-                "particle decoration",
-                "random floating animation",
-                "meaningless parallax"
-            ],
-            "allowed_motion": {
-                "camera_motion": "simulate cinematic lens movement",
-                "material_motion": "light reflection, depth, deformation",
-                "narrative_motion": "guide user attention"
-            },
-            "physics": {
-                "engine": "GSAP + Lenis + WebGL",
-                "easing": "natural acceleration curve",
-                "duration": "300-800ms"
-            }
-        },
-        "material_system": {
-            "principle": "Digital materials must obey physical reality",
-            "pbr_parameters": {
-                "roughness": "controlled by material identity",
-                "metalness": "based on real material properties",
-                "normal_detail": "micro surface variation",
-                "environment": "physical reflection source"
-            },
-            "material_library": [
-                "polished stone",
-                "brushed metal",
-                "handmade paper",
-                "natural wood",
-                "glass crystal",
-                "silk fabric"
             ]
         },
-        "attention_design_engine": {
-            "law": "Every element must satisfy at least one function",
-            "functions": [
-                "capture attention",
-                "communicate meaning",
-                "enhance emotion",
-                "increase usability"
+        "visual_governance": {
+            "principle": "高级设计来自克制，而不是视觉堆积",
+            "constraints": [
+                "禁止没有功能目的的视觉装饰",
+                "禁止依靠流行数字效果制造高级感",
+                "禁止使用无法解释来源的光影与视觉元素",
+                "禁止为了展示技术而牺牲体验",
+                "禁止所有页面元素竞争注意力"
             ],
-            "attention_control": {
-                "visual_priority": [
-                    "scale",
-                    "contrast",
-                    "position",
-                    "motion",
-                    "material"
-                ]
-            }
+            "quality_rules": [
+                "减少元素数量，提高单个元素价值",
+                "让视觉焦点自然产生，而不是强迫用户观看",
+                "保持视觉张力与信息秩序平衡"
+            ]
         },
-        "interaction_intelligence": {
-            "principle": "Interface responds like a physical object",
-            "cursor": "context aware feedback",
-            "hover": {
-                "duration": "300-500ms",
-                "response": [
-                    "light change",
-                    "depth change",
-                    "material response"
-                ]
+        "visual_economy_system": {
+            "principle": "每一个像素都必须产生价值",
+            "evaluation": [
+                "Does it improve understanding",
+                "Does it strengthen emotion",
+                "Does it increase usability",
+                "Does it create memory"
+            ],
+            "rule": "无法产生价值的视觉成本必须删除"
+        },
+        "color_system": {
+            "principle": "色彩建立品牌识别与情绪控制",
+            "roles": {
+                "identity": "品牌识别",
+                "hierarchy": "视觉层级",
+                "emotion": "情绪表达",
+                "feedback": "状态反馈"
             },
-            "scroll": {
-                "concept": "camera movement instead of document movement"
+            "constraints": [
+                "避免无品牌依据的颜色选择",
+                "避免依赖趋势色制造高级感",
+                "保持长期视觉生命力"
+            ]
+        },
+        "typography_system": {
+            "principle": "文字不仅传递信息，同时塑造品牌气质",
+            "rules": {
+                "hierarchy": "明确的信息层级",
+                "rhythm": "建立阅读节奏",
+                "balance": "控制视觉重量",
+                "clarity": "保证信息可理解"
+            },
+            "validation": [
+                "Typography creates authority",
+                "Typography improves experience",
+                "Typography remains elegant without decoration"
+            ]
+        },
+        "layout_system": {
+            "principle": "布局创造秩序、节奏与视觉记忆",
+            "rules": {
+                "focus": "每个场景保持明确视觉中心",
+                "balance": "自由表达必须保持结构稳定",
+                "spacing": "留白用于提升价值感",
+                "consistency": "保持系统连续性"
+            },
+            "anti_chaos": [
+                "避免无目的错位",
+                "避免过度复杂结构",
+                "避免信息密度失控"
+            ]
+        },
+        "motion_system": {
+            "principle": "动效是一种叙事语言，而不是视觉效果",
+            "motion_rules": [
+                "每一次移动必须有目的",
+                "每一次变化必须有原因",
+                "每一次反馈必须符合用户预期"
+            ],
+            "avoid": [
+                "continuous decoration",
+                "random movement",
+                "attention competition"
+            ],
+            "quality_standard": "Motion should feel inevitable, not added."
+        },
+        "interaction_system": {
+            "principle": "数字体验应接近真实世界反馈",
+            "rules": [
+                "简单",
+                "自然",
+                "可预测",
+                "有反馈"
+            ],
+            "evaluation": [
+                "用户是否无需学习即可理解",
+                "操作是否符合心理预期",
+                "反馈是否增强体验"
+            ]
+        },
+        "technology_governance": {
+            "principle": "技术服务体验，而不是展示技术",
+            "rules": [
+                "优先解决体验问题",
+                "避免技术炫技",
+                "保证性能稳定",
+                "保证长期维护"
+            ],
+            "technology_selection": {
+                "question": [
+                    "Does technology improve experience?",
+                    "Does technology create unique value?"
+                ],
+                "negative_answer": "Do not implement"
             }
         },
         "performance_governance": {
-            "target": {
+            "principle": "高级体验必须同时满足视觉质量与性能质量",
+            "targets": {
                 "fps": 60,
                 "lcp": "<1.2s",
                 "cls": "<0.1"
             },
-            "webgl_budget": {
-                "draw_calls": "<100",
-                "texture": "2048 maximum",
-                "lod": "mandatory"
-            }
+            "optimization": [
+                "资源控制",
+                "加载优化",
+                "渲染效率",
+                "设备适配"
+            ]
         },
-        "luxury_validation": {
-            "quality_questions": [
-                "Does the design create desire before explanation?",
-                "Does every movement have narrative meaning?",
-                "Can materials be perceived as physically real?",
-                "Does typography create authority?",
-                "Would removing any element improve the experience?"
+        "luxury_quality_audit": {
+            "principle": "通过严格审查保证世界级品质",
+            "questions": [
+                "Is the design meaningful?",
+                "Is the experience memorable?",
+                "Is every element necessary?",
+                "Does it feel timeless?",
+                "Would removing something improve it?"
             ],
-            "target_score": "99+"
+            "scoring": {
+                "visual_quality": "99+",
+                "experience_quality": "99+",
+                "innovation_quality": "98+",
+                "execution_quality": "99+"
+            }
         }
     }
 }
