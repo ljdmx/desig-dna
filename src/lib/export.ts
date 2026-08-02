@@ -1,8 +1,14 @@
 import { HEX_KEYS, labelOf, type DesignSystem } from "@/data/library";
 
-/** Exact object from the source JSON, untouched. */
-export function toJson(design: DesignSystem): string {
-  return JSON.stringify(design, null, 2);
+/** Exact object from the source JSON plus the library-level optimization_framework. */
+export function toJson(
+  design: DesignSystem,
+  optimizationFramework?: Record<string, unknown>,
+): string {
+  const out = optimizationFramework
+    ? { ...design, optimization_framework: optimizationFramework }
+    : design;
+  return JSON.stringify(out, null, 2);
 }
 
 function renderValue(value: unknown, indent = 0): string {
@@ -31,11 +37,17 @@ function renderValue(value: unknown, indent = 0): string {
 
 const SKIP = new Set(["id", "name"]);
 
-export function toMarkdown(d: DesignSystem): string {
+export function toMarkdown(
+  d: DesignSystem,
+  optimizationFramework?: Record<string, unknown>,
+): string {
   const parts: string[] = [`# ${d.id} · ${d.name}`, ""];
   for (const [key, value] of Object.entries(d)) {
     if (SKIP.has(key)) continue;
     parts.push(`## ${labelOf(key)}`, "", renderValue(value), "");
+  }
+  if (optimizationFramework) {
+    parts.push(`## ${labelOf("optimization_framework")}`, "", renderValue(optimizationFramework), "");
   }
   return parts.join("\n");
 }

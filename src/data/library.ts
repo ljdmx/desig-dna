@@ -1,6 +1,5 @@
 import rawV7 from "./design-library.json";
 import rawV9 from "./design-library-v9.json";
-import rawV11 from "./design-library-v11.json";
 
 export type ColorSystem = Record<string, unknown> & {
   primary: string;
@@ -27,6 +26,7 @@ export type DesignSystem = {
 export type RawLibrary = {
   library: { name: string; version: string; design_count: number };
   design_systems: DesignSystem[];
+  optimization_framework?: Record<string, unknown>;
 };
 
 export type LibraryVersion = {
@@ -36,6 +36,8 @@ export type LibraryVersion = {
   meta: RawLibrary["library"];
   systems: DesignSystem[];
   raw: RawLibrary;
+  /** Library-level optimization framework, shared by every design in the version. */
+  optimizationFramework?: Record<string, unknown>;
 };
 
 const build = (
@@ -45,13 +47,20 @@ const build = (
   raw: unknown,
 ): LibraryVersion => {
   const data = raw as RawLibrary;
-  return { slug, label, tagline, meta: data.library, systems: data.design_systems, raw: data };
+  return {
+    slug,
+    label,
+    tagline,
+    meta: data.library,
+    systems: data.design_systems,
+    raw: data,
+    optimizationFramework: data.optimization_framework,
+  };
 };
 
 export const VERSIONS: LibraryVersion[] = [
   build("v7", "v7.0", "Design DNA Library — 基础设计基因库", rawV7),
   build("v9", "v9.0", "Awwwards Ultimate — 可落地执行层", rawV9),
-  build("v11", "v11.0", "Design Intelligence Engine — 设计智能引擎", rawV11),
 ];
 
 export const DEFAULT_VERSION = VERSIONS[0]!.slug;
@@ -99,6 +108,7 @@ export const FIELD_LABELS: Record<string, string> = {
   material_system: "材质物理系统 Material System",
   performance_budget: "性能预算 Performance Budget",
   v9_execution_layer: "执行层 Execution Layer",
+  optimization_framework: "优化框架 Optimization Framework",
 };
 
 export const labelOf = (key: string) =>

@@ -47,8 +47,10 @@ const slug = (key: string) => key.replace(/_/g, "-");
 function DesignDetail() {
   const { versionSlug, versionLabel, id } = Route.useLoaderData();
   const design = getDesign(versionSlug, id)!;
+  const optimizationFramework = getVersion(versionSlug)?.optimizationFramework;
 
   const sectionKeys = Object.keys(design).filter((k) => !HERO_FIELDS.has(k));
+  const navKeys = optimizationFramework ? [...sectionKeys, "optimization_framework"] : sectionKeys;
 
   return (
     <div className="min-h-screen bg-background">
@@ -68,12 +70,12 @@ function DesignDetail() {
           <CopyButton
             variant="solid"
             label="复制 Markdown"
-            getText={() => toMarkdown(design)}
+            getText={() => toMarkdown(design, optimizationFramework)}
             toastMessage="已复制完整 Markdown 方案"
           />
           <CopyButton
             label="复制 JSON"
-            getText={() => toJson(design)}
+            getText={() => toJson(design, optimizationFramework)}
             toastMessage="已复制完整 JSON 方案"
           />
           <CopyButton
@@ -87,7 +89,7 @@ function DesignDetail() {
       <div className="mx-auto max-w-6xl px-5 lg:flex lg:gap-12">
         <nav className="hidden shrink-0 lg:block lg:w-52">
           <ul className="sticky top-40 space-y-2 py-16 text-xs">
-            {sectionKeys.map((k) => (
+            {navKeys.map((k) => (
               <li key={k}>
                 <a
                   href={`#${slug(k)}`}
@@ -137,6 +139,12 @@ function DesignDetail() {
               )}
             </SectionBlock>
           ))}
+
+          {optimizationFramework && (
+            <SectionBlock id="optimization-framework" title={labelOf("optimization_framework")}>
+              <DataValue value={optimizationFramework} />
+            </SectionBlock>
+          )}
         </main>
       </div>
     </div>
