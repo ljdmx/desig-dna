@@ -10,12 +10,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "沉浸式数字美术馆，收录 v7 / v9 两个版本的顶级 Web 设计系统，支持一键复制 Markdown、JSON 与全部色值。",
+          "沉浸式数字美术馆，收录 v1 / v2 两个版本的顶级 Web 设计系统，支持一键复制 Markdown、JSON 与全部色值。",
       },
       { property: "og:title", content: "探索顶级设计系统" },
       {
         property: "og:description",
-        content: "Premium Web Experience OS™ — 可被探索的数字设计艺术品，v7 / v9 双版本完整收录。",
+        content: "Premium Web Experience OS™ — 可被探索的数字设计艺术品，v1 / v2 双版本完整收录。",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

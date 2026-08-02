@@ -16,11 +16,24 @@ function renderValue(value: unknown, indent = 0): string {
   if (value === null || value === undefined) return "";
   if (Array.isArray(value)) {
     return value
-      .map((v) =>
-        v !== null && typeof v === "object"
-          ? `${pad}-\n${renderValue(v, indent + 1)}`
-          : `${pad}- ${String(v)}`,
-      )
+      .map((v) => {
+        if (v !== null && typeof v === "object") {
+          if (!Array.isArray(v)) {
+            const entries = Object.entries(v as Record<string, unknown>);
+            const allScalar = entries.every(
+              ([, val]) => val === null || typeof val !== "object",
+            );
+            if (allScalar) {
+              return (
+                `${pad}- ` +
+                entries.map(([k, val]) => `**${k}**: ${String(val)}`).join(" · ")
+              );
+            }
+          }
+          return `${pad}-\n${renderValue(v, indent + 1)}`;
+        }
+        return `${pad}- ${String(v)}`;
+      })
       .join("\n");
   }
   if (typeof value === "object") {

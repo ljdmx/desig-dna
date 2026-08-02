@@ -1,5 +1,5 @@
-import rawV7 from "./design-library.json";
-import rawV9 from "./design-library-v9.json";
+import rawV1 from "./design-library.json";
+import rawV2 from "./design-library-v9.json";
 
 export type ColorSystem = Record<string, unknown> & {
   primary: string;
@@ -59,8 +59,8 @@ const build = (
 };
 
 export const VERSIONS: LibraryVersion[] = [
-  build("v7", "v7.0", "Design DNA Library — 基础设计基因库", rawV7),
-  build("v9", "v9.0", "Awwwards Ultimate — 可落地执行层", rawV9),
+  build("v1", "v1.0", "Design DNA Library — 基础设计基因库", rawV1),
+  build("v2", "v2.0", "Awwwards Ultimate — 可落地执行层", rawV2),
 ];
 
 export const DEFAULT_VERSION = VERSIONS[0]!.slug;
