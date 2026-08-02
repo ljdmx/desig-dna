@@ -9,10 +9,12 @@ export function DesignCard({
   design,
   index,
   version,
+  optimizationFramework,
 }: {
   design: DesignSystem;
   index: number;
   version: string;
+  optimizationFramework?: Record<string, unknown>;
 }) {
   return (
     <Link
@@ -55,12 +57,12 @@ export function DesignCard({
         <div className="mt-5 flex flex-wrap gap-2">
           <CopyButton
             label="Markdown"
-            getText={() => toMarkdown(design)}
+            getText={() => toMarkdown(design, optimizationFramework)}
             toastMessage={`已复制 ${design.id} 的 Markdown 方案`}
           />
           <CopyButton
             label="JSON"
-            getText={() => toJson(design)}
+            getText={() => toJson(design, optimizationFramework)}
             toastMessage={`已复制 ${design.id} 的 JSON 方案`}
           />
           <CopyButton

@@ -93,7 +93,13 @@ export function LibraryBrowser({ version }: { version: LibraryVersion }) {
           </p>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {results.map((d, i) => (
-              <DesignCard key={d.id} design={d} index={i} version={version.slug} />
+              <DesignCard
+                key={d.id}
+                design={d}
+                index={i}
+                version={version.slug}
+                optimizationFramework={version.optimizationFramework}
+              />
             ))}
           </div>
           {results.length === 0 && (
