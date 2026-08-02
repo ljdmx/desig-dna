@@ -10,43 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as DesignIdRouteImport } from './routes/design.$id'
+import { Route as VersionVersionRouteImport } from './routes/version.$version'
+import { Route as DesignVersionIdRouteImport } from './routes/design.$version.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DesignIdRoute = DesignIdRouteImport.update({
-  id: '/design/$id',
-  path: '/design/$id',
+const VersionVersionRoute = VersionVersionRouteImport.update({
+  id: '/version/$version',
+  path: '/version/$version',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DesignVersionIdRoute = DesignVersionIdRouteImport.update({
+  id: '/design/$version/$id',
+  path: '/design/$version/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/design/$id': typeof DesignIdRoute
+  '/version/$version': typeof VersionVersionRoute
+  '/design/$version/$id': typeof DesignVersionIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/design/$id': typeof DesignIdRoute
+  '/version/$version': typeof VersionVersionRoute
+  '/design/$version/$id': typeof DesignVersionIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/design/$id': typeof DesignIdRoute
+  '/version/$version': typeof VersionVersionRoute
+  '/design/$version/$id': typeof DesignVersionIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/design/$id'
+  fullPaths: '/' | '/version/$version' | '/design/$version/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/design/$id'
-  id: '__root__' | '/' | '/design/$id'
+  to: '/' | '/version/$version' | '/design/$version/$id'
+  id: '__root__' | '/' | '/version/$version' | '/design/$version/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  DesignIdRoute: typeof DesignIdRoute
+  VersionVersionRoute: typeof VersionVersionRoute
+  DesignVersionIdRoute: typeof DesignVersionIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -58,11 +68,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/design/$id': {
-      id: '/design/$id'
-      path: '/design/$id'
-      fullPath: '/design/$id'
-      preLoaderRoute: typeof DesignIdRouteImport
+    '/version/$version': {
+      id: '/version/$version'
+      path: '/version/$version'
+      fullPath: '/version/$version'
+      preLoaderRoute: typeof VersionVersionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/design/$version/$id': {
+      id: '/design/$version/$id'
+      path: '/design/$version/$id'
+      fullPath: '/design/$version/$id'
+      preLoaderRoute: typeof DesignVersionIdRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -70,18 +87,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  DesignIdRoute: DesignIdRoute,
+  VersionVersionRoute: VersionVersionRoute,
+  DesignVersionIdRoute: DesignVersionIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
