@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as VersionVersionRouteImport } from './routes/version.$version'
+import { Route as DesignVersionIdRouteImport } from './routes/design.$version.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const VersionVersionRoute = VersionVersionRouteImport.update({
   path: '/version/$version',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DesignVersionIdRoute = DesignVersionIdRouteImport.update({
+  id: '/design/$version/$id',
+  path: '/design/$version/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/version/$version': typeof VersionVersionRoute
+  '/design/$version/$id': typeof DesignVersionIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/version/$version': typeof VersionVersionRoute
+  '/design/$version/$id': typeof DesignVersionIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/version/$version': typeof VersionVersionRoute
+  '/design/$version/$id': typeof DesignVersionIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/version/$version'
+  fullPaths: '/' | '/version/$version' | '/design/$version/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/version/$version'
-  id: '__root__' | '/' | '/version/$version'
+  to: '/' | '/version/$version' | '/design/$version/$id'
+  id: '__root__' | '/' | '/version/$version' | '/design/$version/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   VersionVersionRoute: typeof VersionVersionRoute
+  DesignVersionIdRoute: typeof DesignVersionIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VersionVersionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/design/$version/$id': {
+      id: '/design/$version/$id'
+      path: '/design/$version/$id'
+      fullPath: '/design/$version/$id'
+      preLoaderRoute: typeof DesignVersionIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   VersionVersionRoute: VersionVersionRoute,
+  DesignVersionIdRoute: DesignVersionIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
