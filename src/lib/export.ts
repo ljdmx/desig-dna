@@ -1,4 +1,4 @@
-import { HEX_KEYS, labelOf, type DesignSystem } from "@/data/library";
+import { colorSourceOf, labelOf, nameOf, swatchesOf, type DesignSystem } from "@/data/library";
 
 /** Exact object from the source JSON plus the library-level optimization_framework. */
 export function toJson(
@@ -54,7 +54,7 @@ export function toMarkdown(
   d: DesignSystem,
   optimizationFramework?: Record<string, unknown>,
 ): string {
-  const parts: string[] = [`# ${d.id} · ${d.name}`, ""];
+  const parts: string[] = [`# ${d.id} · ${nameOf(d)}`, ""];
   for (const [key, value] of Object.entries(d)) {
     if (SKIP.has(key)) continue;
     parts.push(`## ${labelOf(key)}`, "", renderValue(value), "");
@@ -79,11 +79,12 @@ function flattenEntries(obj: Record<string, unknown>, prefix = ""): [string, str
 }
 
 export function toColors(d: DesignSystem): string {
-  const lines = flattenEntries(d.color_system as Record<string, unknown>).map(
-    ([k, v]) => `${k}: ${v}`,
-  );
-  const hexes = HEX_KEYS.map((k) => d.color_system[k]).join(", ");
-  return [`/* ${d.id} · ${d.name} */`, ...lines, ``, `HEX: ${hexes}`].join("\n");
+  const src = colorSourceOf(d);
+  const lines = src
+    ? flattenEntries({ [src[0]]: src[1] } as Record<string, unknown>).map(([k, v]) => `${k}: ${v}`)
+    : [];
+  const hexes = Array.from(new Set(swatchesOf(d).map(([, hex]) => hex))).join(", ");
+  return [`/* ${d.id} · ${nameOf(d)} */`, ...lines, ``, `HEX: ${hexes}`].join("\n");
 }
 
 export async function copyText(text: string): Promise<boolean> {
