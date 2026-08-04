@@ -5,7 +5,14 @@ import { DesignCard } from "@/components/DesignCard";
 import { Logo } from "@/components/Logo";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { VersionTabs } from "@/components/VersionTabs";
-import { keywordsOf, type LibraryVersion } from "@/data/library";
+import {
+  keywordsOf,
+  keywordsOfDesign,
+  nameOf,
+  positioningOf,
+  summaryOf,
+  type LibraryVersion,
+} from "@/data/library";
 
 export function LibraryBrowser({ version }: { version: LibraryVersion }) {
   const [query, setQuery] = useState("");
@@ -16,10 +23,10 @@ export function LibraryBrowser({ version }: { version: LibraryVersion }) {
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
     return version.systems.filter((d) => {
-      const matchesKeyword = !keyword || d.design_keywords.includes(keyword);
+      const matchesKeyword = !keyword || keywordsOfDesign(d).includes(keyword);
       const matchesQuery =
         !q ||
-        [d.id, d.name, d.design_philosophy, d.visual_positioning, ...d.design_keywords]
+        [d.id, nameOf(d), summaryOf(d), positioningOf(d), ...keywordsOfDesign(d)]
           .join(" ")
           .toLowerCase()
           .includes(q);

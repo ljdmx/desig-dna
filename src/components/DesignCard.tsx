@@ -2,7 +2,14 @@ import { Link } from "@tanstack/react-router";
 
 import { ColorSwatchRow } from "@/components/ColorSwatchRow";
 import { CopyButton } from "@/components/CopyButton";
-import type { DesignSystem } from "@/data/library";
+import {
+  keywordsOfDesign,
+  nameOf,
+  scoreOf,
+  summaryOf,
+  swatchesOf,
+  type DesignSystem,
+} from "@/data/library";
 import { toColors, toJson, toMarkdown } from "@/lib/export";
 
 export function DesignCard({
@@ -30,19 +37,21 @@ export function DesignCard({
           <span className="font-mono text-xs tracking-[0.2em] text-muted-foreground">
             {design.id}
           </span>
-          <span className="rounded-full border border-border px-2 py-0.5 font-mono text-[11px] text-accent-soft">
-            {design.premium_score.overall}
-          </span>
+          {scoreOf(design) && (
+            <span className="rounded-full border border-border px-2 py-0.5 font-mono text-[11px] text-accent-soft">
+              {scoreOf(design)}
+            </span>
+          )}
         </div>
 
-        <h3 className="mt-4 font-display text-xl leading-[1.4] text-foreground">{design.name}</h3>
+        <h3 className="mt-4 font-display text-xl leading-[1.4] text-foreground">{nameOf(design)}</h3>
 
         <p className="mt-3 line-clamp-3 text-sm leading-[1.6] text-muted-foreground">
-          {design.design_philosophy}
+          {summaryOf(design)}
         </p>
 
         <div className="mt-5 flex flex-wrap gap-1.5">
-          {design.design_keywords.slice(0, 3).map((k) => (
+          {keywordsOfDesign(design).slice(0, 3).map((k) => (
             <span
               key={k}
               className="rounded-full bg-surface-raised px-2.5 py-1 text-[12px] font-medium text-muted-foreground transition-transform duration-200 group-hover:-translate-y-0.5"
@@ -52,7 +61,7 @@ export function DesignCard({
           ))}
         </div>
 
-        <ColorSwatchRow colors={design.color_system} className="mt-6" />
+        <ColorSwatchRow colors={swatchesOf(design)} className="mt-6" />
 
         <div className="mt-5 flex flex-wrap gap-2">
           <CopyButton
