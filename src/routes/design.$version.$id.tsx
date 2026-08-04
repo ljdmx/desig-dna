@@ -6,7 +6,20 @@ import { CopyButton } from "@/components/CopyButton";
 import { DataValue } from "@/components/DataValue";
 import { SectionBlock } from "@/components/SectionBlock";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { HERO_FIELDS, getDesign, getVersion, labelOf } from "@/data/library";
+import {
+  HERO_FIELDS,
+  categoryOf,
+  collectHexes,
+  englishOf,
+  getDesign,
+  getVersion,
+  keywordsOfDesign,
+  labelOf,
+  nameOf,
+  positioningOf,
+  summaryOf,
+  swatchesOf,
+} from "@/data/library";
 import { toColors, toJson, toMarkdown } from "@/lib/export";
 
 export const Route = createFileRoute("/design/$version/$id")({
@@ -26,8 +39,8 @@ export const Route = createFileRoute("/design/$version/$id")({
       };
     }
     const design = getDesign(loaderData.versionSlug, loaderData.id)!;
-    const title = `${design.name} · ${design.id} ${loaderData.versionLabel} | Design DNA Library`;
-    const description = design.design_philosophy.slice(0, 150);
+    const title = `${nameOf(design)} · ${design.id} ${loaderData.versionLabel} | Design DNA Library`;
+    const description = summaryOf(design).slice(0, 150);
     return {
       meta: [
         { title },
@@ -108,13 +121,18 @@ function DesignDetail() {
               {design.id} · {versionLabel}
             </span>
             <h1 className="mt-5 font-display text-[32px] leading-[1.4] text-foreground sm:text-[44px]">
-              {design.name}
+              {nameOf(design)}
             </h1>
+            {(englishOf(design) || categoryOf(design)) && (
+              <p className="mt-2 font-mono text-[12px] tracking-[0.15em] text-accent-soft">
+                {[englishOf(design), categoryOf(design)].filter(Boolean).join(" · ")}
+              </p>
+            )}
             <p className="mt-5 max-w-2xl text-[15px] leading-[1.6] text-muted-foreground">
-              {design.visual_positioning}
+              {positioningOf(design)}
             </p>
             <div className="mt-6 flex flex-wrap gap-1.5">
-              {design.design_keywords.map((k) => (
+              {keywordsOfDesign(design).map((k) => (
                 <span
                   key={k}
                   className="rounded-full bg-surface-raised px-2.5 py-1 text-[12px] font-medium text-muted-foreground"
@@ -123,15 +141,15 @@ function DesignDetail() {
                 </span>
               ))}
             </div>
-            <ColorSwatchRow colors={design.color_system} className="mt-8 h-2" />
+            <ColorSwatchRow colors={swatchesOf(design)} className="mt-8 h-2" />
           </section>
 
           {sectionKeys.map((key) => (
             <SectionBlock key={key} id={slug(key)} title={labelOf(key)}>
-              {key === "color_system" ? (
-                <ColorSystemBlock data={design.color_system as Record<string, unknown>} />
+              {key === "color_system" || key === "color_dna" ? (
+                <ColorSystemBlock data={design[key] as Record<string, unknown>} />
               ) : key === "premium_score" ? (
-                <ScoreBlock data={design.premium_score} />
+                <ScoreBlock data={design.premium_score ?? {}} />
               ) : typeof design[key] === "string" ? (
                 <p>{design[key] as string}</p>
               ) : (
@@ -152,19 +170,19 @@ function DesignDetail() {
 }
 
 function ColorSystemBlock({ data }: { data: Record<string, unknown> }) {
-  const swatches = Object.entries(data).filter(
-    ([, v]) => typeof v === "string" && /^#([0-9a-f]{3,8})$/i.test(v),
-  ) as [string, string][];
+  const swatches = collectHexes(data);
   const rest = Object.fromEntries(
-    Object.entries(data).filter(([k]) => !swatches.some(([sk]) => sk === k)),
+    Object.entries(data).filter(
+      ([, v]) => !(typeof v === "string" && /^#([0-9a-f]{3,8})$/i.test(v)),
+    ),
   );
 
   return (
     <>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        {swatches.map(([k, v]) => (
+        {swatches.map(([k, v], i) => (
           <button
-            key={k}
+            key={`${k}-${i}`}
             type="button"
             onClick={() => navigator.clipboard?.writeText(v)}
             className="overflow-hidden rounded-xl border border-border text-left transition-transform duration-200 hover:-translate-y-1"
