@@ -60,7 +60,9 @@ const slug = (key: string) => key.replace(/_/g, "-");
 function DesignDetail() {
   const { versionSlug, versionLabel, id } = Route.useLoaderData();
   const design = getDesign(versionSlug, id)!;
-  const optimizationFramework = getVersion(versionSlug)?.optimizationFramework;
+  const versionEntry = getVersion(versionSlug);
+  const optimizationFramework = versionEntry?.optimizationFramework;
+  const showColors = versionEntry?.group !== "动效系统";
 
   const sectionKeys = Object.keys(design).filter((k) => !HERO_FIELDS.has(k));
   const navKeys = optimizationFramework ? [...sectionKeys, "optimization_framework"] : sectionKeys;
@@ -91,11 +93,13 @@ function DesignDetail() {
             getText={() => toJson(design, optimizationFramework)}
             toastMessage="已复制完整 JSON 方案"
           />
-          <CopyButton
-            label="复制全部色值"
-            getText={() => toColors(design)}
-            toastMessage="已复制全部色值"
-          />
+          {showColors && (
+            <CopyButton
+              label="复制全部色值"
+              getText={() => toColors(design)}
+              toastMessage="已复制全部色值"
+            />
+          )}
         </div>
       </header>
 

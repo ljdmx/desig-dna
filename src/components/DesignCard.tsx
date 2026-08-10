@@ -17,11 +17,13 @@ export function DesignCard({
   index,
   version,
   optimizationFramework,
+  showColors = true,
 }: {
   design: DesignSystem;
   index: number;
   version: string;
   optimizationFramework?: Record<string, unknown>;
+  showColors?: boolean;
 }) {
   return (
     <Link
@@ -74,11 +76,13 @@ export function DesignCard({
             getText={() => toJson(design, optimizationFramework)}
             toastMessage={`已复制 ${design.id} 的 JSON 方案`}
           />
-          <CopyButton
-            label="全部色值"
-            getText={() => toColors(design)}
-            toastMessage={`已复制 ${design.id} 的全部色值`}
-          />
+          {showColors && (
+            <CopyButton
+              label="全部色值"
+              getText={() => toColors(design)}
+              toastMessage={`已复制 ${design.id} 的全部色值`}
+            />
+          )}
         </div>
       </div>
     </Link>
