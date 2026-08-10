@@ -1,0 +1,2988 @@
+{
+    "library": {
+        "name": "Motion Design System",
+        "version": "v1",
+        "design_count": 16
+    },
+    "design_systems": [
+        {
+            "id": "MOTION-001",
+            "identity": {
+                "name_cn": "动态石境系统",
+                "name_en": "Dynamic Stone Landscape Motion",
+                "category": "Natural Material Motion",
+                "scene_type": "Immersive Digital Environment",
+                "keywords": [
+                    "stone",
+                    "nature",
+                    "gravity",
+                    "organic",
+                    "minimal",
+                    "cinematic"
+                ],
+                "description": "以真实不规则天然石材替代传统粒子背景，通过自然物理规律、空间关系和材质变化，构建安静、高级、具有生命感的数字环境。"
+            },
+            "design_intent": {
+                "core_idea": "将自然石材作为数字空间中的主体生命元素，通过微弱运动和环境响应创造沉浸式体验。",
+                "visual_language": "东方庭院美学、建筑空间美学、自然材质美学、极简电影语言。",
+                "emotional_direction": "宁静、稳定、沉思、力量感、自然高级。",
+                "user_experience_goal": "让用户感觉进入一个真实存在的数字景观，而不是观看一个动画效果。"
+            },
+            "environment_system": {
+                "space_type": "Digital Natural Landscape",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "irregular stones",
+                            "small natural rocks",
+                            "mineral fragments"
+                        ],
+                        "behavior": "近距离展示石材纹理、重量感和微弱空间变化。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "floating stone groups",
+                            "soft shadow",
+                            "surface reflection"
+                        ],
+                        "behavior": "通过空间层次建立视觉深度和构图关系。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "soft fog",
+                            "ambient light",
+                            "dark atmospheric space"
+                        ],
+                        "behavior": "提供环境氛围，不抢夺主体注意力。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "natural stone",
+                    "marble",
+                    "granite",
+                    "jade stone"
+                ],
+                "material_properties": {
+                    "surface": "rough organic stone surface",
+                    "texture": "natural mineral grain, erosion marks, subtle imperfections",
+                    "reflection": "low soft reflection",
+                    "roughness": "high",
+                    "transparency": "none"
+                },
+                "realism_style": "Photorealistic PBR Material"
+            },
+            "form_system": {
+                "object_type": "Natural Irregular Stone Object",
+                "shape_language": {
+                    "geometry": "organic irregular geometry",
+                    "symmetry": "asymmetric",
+                    "variation": "high variation in size, angle and surface",
+                    "imperfection": "natural erosion, geological randomness"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Organic Physical Motion",
+                "movement_logic": "石块不会主动漂浮，而是受到空间环境、重力和微弱力量影响产生自然变化。",
+                "physics_rules": [
+                    "gravity",
+                    "inertia",
+                    "collision",
+                    "weight",
+                    "friction"
+                ],
+                "motion_behavior": [
+                    "micro displacement",
+                    "slow rotation",
+                    "subtle position adjustment",
+                    "light-driven surface change",
+                    "shadow evolution"
+                ],
+                "speed_level": "Extremely Slow",
+                "rhythm_pattern": "Natural Breathing Rhythm",
+                "loop_type": "Seamless Organic Loop"
+            },
+            "camera_system": {
+                "camera_style": "Cinematic Documentary Camera",
+                "movement": "Slow push-in with subtle parallax",
+                "depth_effect": "Multi-layer depth of field",
+                "focus_strategy": "Focus on material details and spatial atmosphere"
+            },
+            "lighting_system": {
+                "lighting_type": "Natural Soft Directional Lighting",
+                "light_behavior": "Slow environmental light movement across stone surfaces",
+                "shadow_behavior": "Soft shadow transition with realistic depth",
+                "atmosphere": "Quiet cinematic morning atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll interaction",
+                "response": "Nearby stones slightly react to invisible spatial force",
+                "interaction_strength": "Low",
+                "recovery_behavior": "Slow natural return to equilibrium"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "PBR Material",
+                    "GLSL Shader",
+                    "Noise Function",
+                    "Physics Simulation",
+                    "Environment Mapping"
+                ],
+                "render_method": "Real-time Physically Based Rendering",
+                "performance_strategy": "Low object count, high material quality, optimized geometry"
+            },
+            "animation_token": {
+                "duration": "8-20 seconds",
+                "easing": "cubic-bezier(0.16,1,0.3,1)",
+                "delay": "0-800ms",
+                "movement_range": "1%-3% position variation",
+                "frequency": "Low Frequency Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Luxury Brand",
+                    "Architecture",
+                    "Digital Art",
+                    "Culture",
+                    "AI Product"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Brand Story",
+                    "Product Showcase",
+                    "Experience Space"
+                ],
+                "content_type": [
+                    "brand introduction",
+                    "immersive storytelling",
+                    "visual atmosphere"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "realistic stone material",
+                    "natural physics",
+                    "slow movement",
+                    "cinematic lighting",
+                    "spatial depth"
+                ],
+                "avoid": [
+                    "excessive object movement",
+                    "random floating objects",
+                    "visual clutter",
+                    "over-designed effects"
+                ],
+                "forbidden": [
+                    "particle background",
+                    "neon light",
+                    "cyber grid",
+                    "glowing dots",
+                    "technology HUD",
+                    "fast rotation"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic digital landscape, irregular natural stones floating in a quiet atmospheric space, realistic mineral textures, heavy physical presence, subtle gravity-based movement, soft sunlight, deep shadows, natural fog, Japanese minimal aesthetics, oriental garden atmosphere, luxury digital experience, photorealistic PBR materials, slow cinematic camera movement, no particles, no neon, no futuristic HUD, no visual noise."
+        },
+        {
+            "id": "MOTION-002",
+            "identity": {
+                "name_cn": "玉石流动系统",
+                "name_en": "Jade Flow Material Motion",
+                "category": "Luxury Material Motion",
+                "scene_type": "Immersive Material Experience",
+                "keywords": [
+                    "jade",
+                    "marble",
+                    "mineral",
+                    "luxury",
+                    "organic",
+                    "cinematic"
+                ],
+                "description": "以玉石、翡翠、大理石等高级矿物材质为核心，通过内部纹理流动、光线折射和微妙形态变化，创造具有东方收藏级质感的数字材质体验。"
+            },
+            "design_intent": {
+                "core_idea": "将玉石内部亿万年形成的自然纹理转化为数字空间中的缓慢生命运动。",
+                "visual_language": "东方玉石美学、博物馆展示语言、奢侈品材质摄影、极简电影视觉。",
+                "emotional_direction": "温润、静谧、珍贵、深邃、时间沉淀感。",
+                "user_experience_goal": "让用户感受到材质内部隐藏的生命感，而不是观看普通纹理动画。"
+            },
+            "environment_system": {
+                "space_type": "Luxury Material Exhibition Space",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "jade sculpture",
+                            "transparent mineral surface",
+                            "polished stone object"
+                        ],
+                        "behavior": "突出玉石细节、内部纹理和材质厚度。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "soft reflection",
+                            "ambient light",
+                            "subtle mineral glow"
+                        ],
+                        "behavior": "通过光线变化强化材质深度和空间层次。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "dark museum space",
+                            "soft haze",
+                            "minimal environment"
+                        ],
+                        "behavior": "提供高级展陈氛围，保持视觉克制。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "jade",
+                    "emerald",
+                    "marble",
+                    "crystal mineral"
+                ],
+                "material_properties": {
+                    "surface": "smooth polished mineral surface",
+                    "texture": "natural internal veins, mineral patterns, layered structure",
+                    "reflection": "soft glossy reflection",
+                    "roughness": "medium-low",
+                    "transparency": "semi-transparent with internal depth"
+                },
+                "realism_style": "Ultra Realistic PBR Material Rendering"
+            },
+            "form_system": {
+                "object_type": "Natural Mineral Sculpture",
+                "shape_language": {
+                    "geometry": "organic carved stone geometry",
+                    "symmetry": "balanced but imperfect",
+                    "variation": "natural variation of mineral structure",
+                    "imperfection": "internal cracks, veins and geological patterns"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Internal Material Motion",
+                "movement_logic": "主体保持稳定，通过内部纹理、光泽和矿物结构变化产生生命感，不进行明显物体运动。",
+                "physics_rules": [
+                    "light refraction",
+                    "material density",
+                    "surface reflection",
+                    "optical depth"
+                ],
+                "motion_behavior": [
+                    "slow internal texture flow",
+                    "subtle color depth change",
+                    "reflection movement",
+                    "light penetration change",
+                    "micro surface evolution"
+                ],
+                "speed_level": "Extremely Slow",
+                "rhythm_pattern": "Deep Natural Flow Rhythm",
+                "loop_type": "Continuous Material Evolution Loop"
+            },
+            "camera_system": {
+                "camera_style": "Luxury Product Cinematic Camera",
+                "movement": "Slow macro camera orbit with gentle push",
+                "depth_effect": "Extreme shallow depth of field",
+                "focus_strategy": "Focus on mineral structure, transparency and surface detail"
+            },
+            "lighting_system": {
+                "lighting_type": "Soft Gallery Lighting",
+                "light_behavior": "Slow light passing through mineral layers",
+                "shadow_behavior": "Soft translucent shadow transition",
+                "atmosphere": "Quiet luxury museum atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll progress",
+                "response": "Light angle and internal reflection subtly change based on user position",
+                "interaction_strength": "Low",
+                "recovery_behavior": "Smooth return to original lighting state"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "PBR Material",
+                    "GLSL Shader",
+                    "Subsurface Scattering",
+                    "Environment Reflection",
+                    "Noise Texture"
+                ],
+                "render_method": "Physically Based Real-time Material Rendering",
+                "performance_strategy": "High-quality shader material with optimized geometry and texture compression"
+            },
+            "animation_token": {
+                "duration": "10-30 seconds",
+                "easing": "cubic-bezier(0.22,1,0.36,1)",
+                "delay": "500-1200ms",
+                "movement_range": "0.5%-2% material deformation",
+                "frequency": "Very Low Frequency Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Luxury Brand",
+                    "Jewelry",
+                    "Architecture",
+                    "Cultural Product",
+                    "AI Experience"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Material Showcase",
+                    "Brand Philosophy",
+                    "Product Detail"
+                ],
+                "content_type": [
+                    "luxury presentation",
+                    "material storytelling",
+                    "brand atmosphere"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "realistic mineral texture",
+                    "internal depth",
+                    "soft reflection",
+                    "slow material evolution",
+                    "cinematic lighting"
+                ],
+                "avoid": [
+                    "surface-only animation",
+                    "bright artificial glow",
+                    "excessive deformation",
+                    "fast color change"
+                ],
+                "forbidden": [
+                    "particle effect",
+                    "neon glow",
+                    "cyber style",
+                    "energy beam",
+                    "holographic HUD",
+                    "rapid morphing"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic jade material experience, realistic translucent jade sculpture with natural mineral veins, internal texture flowing slowly like ancient geological memory, soft gallery lighting, elegant reflections, deep material layers, luxury museum atmosphere, oriental aesthetic, photorealistic PBR rendering, macro cinematic camera movement, extremely slow organic motion, no particles, no neon, no futuristic HUD, no visual noise."
+        },
+        {
+            "id": "MOTION-003",
+            "identity": {
+                "name_cn": "液态记忆系统",
+                "name_en": "Liquid Memory Surface Motion",
+                "category": "Natural Fluid Motion",
+                "scene_type": "Immersive Atmospheric Environment",
+                "keywords": [
+                    "water",
+                    "fluid",
+                    "reflection",
+                    "memory",
+                    "silence",
+                    "cinematic"
+                ],
+                "description": "以自然水面作为核心动态媒介，通过微弱波纹、倒影变化、光线交互和流体物理规律，创造安静、诗意、具有时间感的数字水域空间。"
+            },
+            "design_intent": {
+                "core_idea": "将水面作为时间和记忆的载体，通过极低频流动表现自然环境中的生命变化。",
+                "visual_language": "东方水墨意境、现代极简空间、电影摄影语言、自然环境美学。",
+                "emotional_direction": "平静、空灵、柔和、治愈、时间沉淀感。",
+                "user_experience_goal": "让用户感受到一个真实存在的自然空间，而不是观看简单的水波动画。"
+            },
+            "environment_system": {
+                "space_type": "Digital Water Landscape",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "silent water surface",
+                            "small ripple",
+                            "floating natural elements"
+                        ],
+                        "behavior": "展示水面细节、波纹扩散和局部光影变化。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "reflection",
+                            "mist",
+                            "floating leaves",
+                            "soft shadow"
+                        ],
+                        "behavior": "通过倒影和雾气形成空间深度。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "mountain silhouette",
+                            "soft sky gradient",
+                            "ambient atmosphere"
+                        ],
+                        "behavior": "提供远景环境，使空间具有无限延伸感。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "water",
+                    "glass-like liquid surface",
+                    "natural reflection layer"
+                ],
+                "material_properties": {
+                    "surface": "smooth fluid surface",
+                    "texture": "natural water distortion and reflection pattern",
+                    "reflection": "dynamic environmental reflection",
+                    "roughness": "very low",
+                    "transparency": "semi-transparent shallow water depth"
+                },
+                "realism_style": "Physically Accurate Fluid Rendering"
+            },
+            "form_system": {
+                "object_type": "Natural Fluid Surface",
+                "shape_language": {
+                    "geometry": "organic wave deformation",
+                    "symmetry": "asymmetric",
+                    "variation": "continuous natural variation",
+                    "imperfection": "irregular wave patterns caused by environmental forces"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Organic Fluid Simulation",
+                "movement_logic": "水面保持整体平静，通过环境扰动产生自然波纹和倒影变化，不制造明显运动。",
+                "physics_rules": [
+                    "fluid dynamics",
+                    "surface tension",
+                    "gravity",
+                    "wave propagation"
+                ],
+                "motion_behavior": [
+                    "small ripple expansion",
+                    "reflection distortion",
+                    "slow surface movement",
+                    "light wave interaction",
+                    "mist movement"
+                ],
+                "speed_level": "Extremely Slow",
+                "rhythm_pattern": "Calm Breathing Rhythm",
+                "loop_type": "Natural Infinite Loop"
+            },
+            "camera_system": {
+                "camera_style": "Cinematic Landscape Camera",
+                "movement": "Slow horizontal drift with gentle forward movement",
+                "depth_effect": "Layered atmospheric depth",
+                "focus_strategy": "Balance between water surface detail and environmental reflection"
+            },
+            "lighting_system": {
+                "lighting_type": "Natural Ambient Light",
+                "light_behavior": "Soft sunlight reflection moving across water surface",
+                "shadow_behavior": "Subtle shadow distortion through water movement",
+                "atmosphere": "Quiet dawn or dusk cinematic atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll / User focus",
+                "response": "User interaction creates subtle local water disturbance",
+                "interaction_strength": "Very Low",
+                "recovery_behavior": "Wave gradually disappears and returns to calm surface"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "GLSL Shader",
+                    "FFT Wave Simulation",
+                    "Normal Mapping",
+                    "Reflection Probe",
+                    "Environment Mapping"
+                ],
+                "render_method": "Real-time Physically Based Fluid Rendering",
+                "performance_strategy": "Shader-driven deformation with optimized geometry grid"
+            },
+            "animation_token": {
+                "duration": "15-40 seconds",
+                "easing": "cubic-bezier(0.22,1,0.36,1)",
+                "delay": "800-1500ms",
+                "movement_range": "0.5%-2% surface deformation",
+                "frequency": "Ultra Low Frequency Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Luxury Brand",
+                    "Culture",
+                    "Wellness",
+                    "Architecture",
+                    "Digital Art"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Brand Philosophy",
+                    "Story Experience",
+                    "Atmosphere Background"
+                ],
+                "content_type": [
+                    "emotional storytelling",
+                    "brand atmosphere",
+                    "immersive scene"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "realistic fluid behavior",
+                    "soft reflection",
+                    "natural wave pattern",
+                    "cinematic atmosphere",
+                    "slow environmental change"
+                ],
+                "avoid": [
+                    "large water movement",
+                    "dramatic waves",
+                    "fantasy liquid effects",
+                    "excessive distortion"
+                ],
+                "forbidden": [
+                    "particle water effect",
+                    "neon reflection",
+                    "digital wave grid",
+                    "sci-fi liquid",
+                    "fast ripple animation",
+                    "cartoon water"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic water environment, silent natural water surface with realistic reflections, subtle organic ripples, soft fog, atmospheric depth, poetic oriental landscape aesthetic, calm and minimal digital experience, physically accurate fluid behavior, realistic lighting, slow cinematic camera movement, high-end luxury visual design, no particles, no neon, no futuristic effects, no visual noise."
+        },
+        {
+            "id": "MOTION-004",
+            "identity": {
+                "name_cn": "山雾空间系统",
+                "name_en": "Mountain Fog Environment Motion",
+                "category": "Natural Atmosphere Motion",
+                "scene_type": "Immersive Landscape Environment",
+                "keywords": [
+                    "mountain",
+                    "fog",
+                    "cloud",
+                    "atmosphere",
+                    "nature",
+                    "cinematic"
+                ],
+                "description": "以山川、云雾、空气层次为核心，通过缓慢变化的自然气流、光线穿透和空间深度，构建具有东方山水意境的数字自然环境。"
+            },
+            "design_intent": {
+                "core_idea": "将自然山水中的空气流动数字化，通过雾、光、山体之间的关系创造具有时间感的空间叙事。",
+                "visual_language": "东方山水美学、极简建筑空间、电影摄影景深、自然环境叙事。",
+                "emotional_direction": "宁静、辽阔、神秘、沉浸、时间流逝感。",
+                "user_experience_goal": "让用户进入一个具有空气、距离和空间尺度感的数字山水环境。"
+            },
+            "environment_system": {
+                "space_type": "Digital Mountain Landscape",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "rocks",
+                            "grass silhouette",
+                            "mountain surface detail"
+                        ],
+                        "behavior": "提供近距离空间参照，增强真实尺度感。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "moving fog",
+                            "mountain layers",
+                            "cloud shadows"
+                        ],
+                        "behavior": "通过雾气流动和山体遮挡形成空间纵深。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "distant mountains",
+                            "sky atmosphere",
+                            "soft sunlight"
+                        ],
+                        "behavior": "形成无限延伸的自然空间背景。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "fog",
+                    "stone mountain",
+                    "cloud",
+                    "natural atmosphere"
+                ],
+                "material_properties": {
+                    "surface": "soft atmospheric volume",
+                    "texture": "natural density variation and cloud structure",
+                    "reflection": "diffused environmental light",
+                    "roughness": "high",
+                    "transparency": "volumetric semi-transparent"
+                },
+                "realism_style": "Volumetric Natural Environment Rendering"
+            },
+            "form_system": {
+                "object_type": "Mountain Atmospheric Landscape",
+                "shape_language": {
+                    "geometry": "organic landscape silhouette",
+                    "symmetry": "asymmetric",
+                    "variation": "large-scale natural variation",
+                    "imperfection": "erosion, irregular mountain formation, natural terrain structure"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Atmospheric Environmental Motion",
+                "movement_logic": "空间主体保持稳定，通过空气流动、雾层变化和光线变化表现自然时间循环。",
+                "physics_rules": [
+                    "wind",
+                    "air density",
+                    "gravity",
+                    "atmospheric diffusion"
+                ],
+                "motion_behavior": [
+                    "slow fog movement",
+                    "cloud drift",
+                    "light penetration change",
+                    "atmospheric density variation",
+                    "shadow transition"
+                ],
+                "speed_level": "Extremely Slow",
+                "rhythm_pattern": "Natural Weather Rhythm",
+                "loop_type": "Continuous Environmental Cycle"
+            },
+            "camera_system": {
+                "camera_style": "Cinematic Landscape Photography",
+                "movement": "Slow aerial camera movement with subtle forward drift",
+                "depth_effect": "Extreme atmospheric depth layering",
+                "focus_strategy": "Balance distant mountains and foreground atmosphere"
+            },
+            "lighting_system": {
+                "lighting_type": "Natural Sunrise / Sunset Lighting",
+                "light_behavior": "Soft sunlight gradually passing through fog layers",
+                "shadow_behavior": "Slow mountain shadow transition",
+                "atmosphere": "Quiet oriental mountain morning atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll progress",
+                "response": "Camera perspective and fog density subtly respond to user movement",
+                "interaction_strength": "Low",
+                "recovery_behavior": "Environment gradually returns to original atmospheric state"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "Volumetric Shader",
+                    "Noise Texture",
+                    "Particle-free Fog Simulation",
+                    "Depth Buffer",
+                    "Atmospheric Scattering"
+                ],
+                "render_method": "Real-time Volumetric Environment Rendering",
+                "performance_strategy": "Shader-based fog with layered depth optimization"
+            },
+            "animation_token": {
+                "duration": "20-60 seconds",
+                "easing": "linear cinematic interpolation",
+                "delay": "1000-2000ms",
+                "movement_range": "1%-5% atmospheric displacement",
+                "frequency": "Ultra Low Frequency Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Luxury Brand",
+                    "Architecture",
+                    "Culture",
+                    "Travel",
+                    "Digital Art"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Brand Story",
+                    "Immersive Experience",
+                    "Narrative Transition"
+                ],
+                "content_type": [
+                    "environment storytelling",
+                    "brand philosophy",
+                    "visual atmosphere"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "volumetric atmosphere",
+                    "natural fog behavior",
+                    "deep spatial layering",
+                    "cinematic lighting",
+                    "slow environmental change"
+                ],
+                "avoid": [
+                    "fast cloud movement",
+                    "dramatic weather effects",
+                    "excessive fog density",
+                    "fantasy landscape"
+                ],
+                "forbidden": [
+                    "particle fog",
+                    "glowing mist",
+                    "sci-fi atmosphere",
+                    "neon lighting",
+                    "artificial sky effects",
+                    "game-like environment"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic mountain landscape, endless layers of mountains covered by slow moving natural fog, volumetric atmospheric depth, soft sunlight penetrating clouds, oriental landscape aesthetics, quiet minimal digital environment, realistic terrain, natural weather behavior, cinematic aerial camera movement, luxury immersive experience, no particles, no neon, no fantasy effects, no visual noise."
+        },
+        {
+            "id": "MOTION-005",
+            "identity": {
+                "name_cn": "沙丘流动系统",
+                "name_en": "Desert Dune Flow Motion",
+                "category": "Natural Surface Motion",
+                "scene_type": "Immersive Desert Landscape",
+                "keywords": [
+                    "sand",
+                    "dune",
+                    "wind",
+                    "desert",
+                    "organic",
+                    "cinematic"
+                ],
+                "description": "以沙丘、细沙纹理和风力变化为核心，通过自然风场、颗粒沉积和地形变化模拟真实沙漠环境，创造具有时间流逝感和空间尺度感的数字自然体验。"
+            },
+            "design_intent": {
+                "core_idea": "将沙漠中风与时间共同塑造的地貌转化为数字动态环境，通过缓慢地形变化表达自然力量。",
+                "visual_language": "荒漠景观摄影、极简建筑美学、电影级自然纪录片语言。",
+                "emotional_direction": "辽阔、孤寂、自由、力量、时间沉淀。",
+                "user_experience_goal": "让用户感受到风经过沙丘留下痕迹的自然过程，而不是简单的沙粒动画。"
+            },
+            "environment_system": {
+                "space_type": "Digital Desert Landscape",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "sand surface",
+                            "fine dune texture",
+                            "small natural stones"
+                        ],
+                        "behavior": "展示沙面纹理、风痕和细微结构变化。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "rolling dunes",
+                            "wind trails",
+                            "sand waves"
+                        ],
+                        "behavior": "通过沙丘曲线和风痕变化形成空间层次。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "distant dunes",
+                            "desert atmosphere",
+                            "soft sky gradient"
+                        ],
+                        "behavior": "建立开阔、无限延伸的空间环境。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "fine sand",
+                    "desert stone",
+                    "mineral dust"
+                ],
+                "material_properties": {
+                    "surface": "soft granular desert surface",
+                    "texture": "natural wind-carved sand patterns",
+                    "reflection": "soft diffuse reflection",
+                    "roughness": "very high",
+                    "transparency": "none"
+                },
+                "realism_style": "Photorealistic Natural Terrain Rendering"
+            },
+            "form_system": {
+                "object_type": "Organic Sand Terrain",
+                "shape_language": {
+                    "geometry": "fluid terrain curves",
+                    "symmetry": "asymmetric",
+                    "variation": "large natural terrain variation",
+                    "imperfection": "wind erosion marks and irregular dune formation"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Environmental Wind Motion",
+                "movement_logic": "沙丘主体保持稳定，通过风场影响沙面纹理和局部形态变化，表现自然时间过程。",
+                "physics_rules": [
+                    "wind force",
+                    "gravity",
+                    "particle-free sediment movement",
+                    "surface erosion"
+                ],
+                "motion_behavior": [
+                    "slow sand surface displacement",
+                    "wind pattern evolution",
+                    "dune shadow movement",
+                    "fine texture migration",
+                    "atmospheric dust change"
+                ],
+                "speed_level": "Extremely Slow",
+                "rhythm_pattern": "Natural Wind Rhythm",
+                "loop_type": "Continuous Landscape Evolution"
+            },
+            "camera_system": {
+                "camera_style": "Cinematic Desert Photography",
+                "movement": "Slow aerial glide with wide-angle perspective",
+                "depth_effect": "Large-scale atmospheric depth",
+                "focus_strategy": "Balance terrain structure and environmental scale"
+            },
+            "lighting_system": {
+                "lighting_type": "Golden Hour Desert Lighting",
+                "light_behavior": "Slow sunlight movement across dune curves",
+                "shadow_behavior": "Long soft shadows gradually shifting",
+                "atmosphere": "Warm quiet desert evening atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll interaction",
+                "response": "Camera angle and local wind intensity subtly react to user movement",
+                "interaction_strength": "Low",
+                "recovery_behavior": "Environment smoothly returns to original wind state"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "Terrain Shader",
+                    "GLSL Noise",
+                    "Height Map",
+                    "Wind Field Simulation",
+                    "PBR Material"
+                ],
+                "render_method": "Real-time Procedural Terrain Rendering",
+                "performance_strategy": "Shader-based terrain deformation with optimized displacement mapping"
+            },
+            "animation_token": {
+                "duration": "20-90 seconds",
+                "easing": "linear natural interpolation",
+                "delay": "1000-2500ms",
+                "movement_range": "0.5%-3% surface displacement",
+                "frequency": "Ultra Low Frequency Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Luxury Brand",
+                    "Architecture",
+                    "Automotive",
+                    "Travel",
+                    "Digital Art"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Brand Story",
+                    "Product Showcase",
+                    "Immersive Transition"
+                ],
+                "content_type": [
+                    "environment storytelling",
+                    "brand atmosphere",
+                    "cinematic introduction"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "natural wind behavior",
+                    "realistic sand texture",
+                    "slow terrain evolution",
+                    "cinematic lighting",
+                    "large spatial scale"
+                ],
+                "avoid": [
+                    "fast sandstorm",
+                    "excessive dust movement",
+                    "fantasy desert effects",
+                    "continuous terrain deformation"
+                ],
+                "forbidden": [
+                    "particle sand explosion",
+                    "neon desert",
+                    "sci-fi landscape",
+                    "game environment style",
+                    "rapid morphing terrain",
+                    "artificial wave animation"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic desert landscape, endless organic sand dunes with realistic wind-carved textures, subtle natural sand surface evolution, golden hour sunlight, long shadows, atmospheric depth, minimal luxury visual style, realistic terrain physics, slow aerial camera movement, quiet and powerful natural environment, photorealistic PBR rendering, no particles, no sand explosion, no neon, no futuristic effects, no visual noise."
+        },
+        {
+            "id": "MOTION-006",
+            "identity": {
+                "name_cn": "木纹呼吸系统",
+                "name_en": "Wood Grain Breathing Motion",
+                "category": "Natural Material Motion",
+                "scene_type": "Organic Material Experience",
+                "keywords": [
+                    "wood",
+                    "grain",
+                    "forest",
+                    "organic",
+                    "texture",
+                    "cinematic"
+                ],
+                "description": "以天然木材纹理、年轮结构和有机纤维作为核心，通过微妙纹理变化、光影移动和材质呼吸感，创造具有温度和生命力的数字自然材质体验。"
+            },
+            "design_intent": {
+                "core_idea": "将树木生长过程中形成的年轮与纤维纹理转化为数字空间中的生命循环。",
+                "visual_language": "自然建筑美学、侘寂美学、东方木构空间、奢华家具材质摄影。",
+                "emotional_direction": "温暖、安定、自然、时间沉淀、生命感。",
+                "user_experience_goal": "让用户感受到木材内部蕴含的时间痕迹和自然生命，而非单纯展示纹理。"
+            },
+            "environment_system": {
+                "space_type": "Digital Organic Material Space",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "wood surface",
+                            "tree rings",
+                            "natural fiber details"
+                        ],
+                        "behavior": "展示木质纹理、纤维结构和微观材质细节。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "wood sculpture",
+                            "organic structure",
+                            "soft shadow"
+                        ],
+                        "behavior": "通过材质层次和空间关系增强自然质感。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "forest atmosphere",
+                            "soft light",
+                            "natural haze"
+                        ],
+                        "behavior": "提供安静自然的环境氛围。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "natural wood",
+                    "oak",
+                    "walnut",
+                    "bamboo",
+                    "ancient timber"
+                ],
+                "material_properties": {
+                    "surface": "organic wood grain surface",
+                    "texture": "natural fiber structure, growth rings, subtle cracks",
+                    "reflection": "soft matte reflection",
+                    "roughness": "medium-high",
+                    "transparency": "none"
+                },
+                "realism_style": "Photorealistic Organic Material Rendering"
+            },
+            "form_system": {
+                "object_type": "Natural Wood Structure",
+                "shape_language": {
+                    "geometry": "organic curved wooden form",
+                    "symmetry": "asymmetric",
+                    "variation": "natural growth variation",
+                    "imperfection": "tree knots, cracks, irregular fiber patterns"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Organic Material Breathing Motion",
+                "movement_logic": "木材主体保持稳定，通过纹理、光泽和细微形态变化表现材料内部生命感。",
+                "physics_rules": [
+                    "natural expansion",
+                    "material aging",
+                    "light absorption",
+                    "organic deformation"
+                ],
+                "motion_behavior": [
+                    "slow grain flow",
+                    "subtle texture expansion",
+                    "surface light movement",
+                    "micro deformation",
+                    "shadow evolution"
+                ],
+                "speed_level": "Extremely Slow",
+                "rhythm_pattern": "Organic Breathing Rhythm",
+                "loop_type": "Natural Continuous Loop"
+            },
+            "camera_system": {
+                "camera_style": "Luxury Material Macro Photography",
+                "movement": "Slow macro slide with subtle rotation",
+                "depth_effect": "Shallow depth of field with layered texture focus",
+                "focus_strategy": "Highlight wood grain details and material authenticity"
+            },
+            "lighting_system": {
+                "lighting_type": "Warm Natural Sunlight",
+                "light_behavior": "Soft sunlight moving across wood fibers",
+                "shadow_behavior": "Gentle shadow transition following surface structure",
+                "atmosphere": "Warm quiet forest interior atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll interaction",
+                "response": "Light direction and texture visibility subtly change with user perspective",
+                "interaction_strength": "Low",
+                "recovery_behavior": "Slow return to original material state"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "PBR Material",
+                    "GLSL Shader",
+                    "Displacement Map",
+                    "Normal Map",
+                    "Procedural Texture"
+                ],
+                "render_method": "Real-time Physically Based Material Rendering",
+                "performance_strategy": "High quality texture detail with optimized shader calculation"
+            },
+            "animation_token": {
+                "duration": "15-45 seconds",
+                "easing": "cubic-bezier(0.16,1,0.3,1)",
+                "delay": "800-1500ms",
+                "movement_range": "0.5%-2% texture deformation",
+                "frequency": "Ultra Low Frequency Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Luxury Interior",
+                    "Architecture",
+                    "Furniture",
+                    "Culture",
+                    "Lifestyle Brand"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Material Showcase",
+                    "Brand Philosophy",
+                    "Product Detail"
+                ],
+                "content_type": [
+                    "material storytelling",
+                    "craftsmanship presentation",
+                    "brand atmosphere"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "real wood texture",
+                    "natural imperfection",
+                    "slow material evolution",
+                    "warm lighting",
+                    "organic atmosphere"
+                ],
+                "avoid": [
+                    "fast growth animation",
+                    "fantasy tree effects",
+                    "excessive texture movement",
+                    "artificial nature simulation"
+                ],
+                "forbidden": [
+                    "particle leaves",
+                    "glowing forest",
+                    "magic effects",
+                    "cyber nature",
+                    "neon lighting",
+                    "game-like environment"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic wood material experience, realistic natural wood surface with detailed grain patterns and ancient tree rings, subtle breathing texture evolution, warm sunlight passing through organic fibers, Japanese wabi-sabi aesthetics, luxury interior atmosphere, photorealistic PBR material, macro cinematic camera movement, natural imperfections, calm and timeless feeling, no particles, no neon, no fantasy effects, no visual noise."
+        },
+        {
+            "id": "MOTION-007",
+            "identity": {
+                "name_cn": "宣纸风场系统",
+                "name_en": "Rice Paper Wind Field Motion",
+                "category": "Cultural Material Motion",
+                "scene_type": "Oriental Artistic Environment",
+                "keywords": [
+                    "paper",
+                    "ink",
+                    "wind",
+                    "oriental",
+                    "minimal",
+                    "cinematic"
+                ],
+                "description": "以中国宣纸、墨迹和自然风场为核心，通过纸张纤维变化、柔和褶皱、墨色扩散和空气流动，构建具有东方美学和诗意叙事的数字艺术空间。"
+            },
+            "design_intent": {
+                "core_idea": "将传统宣纸作为数字空间中的生命媒介，通过风、墨、水之间的关系表达东方时间美学。",
+                "visual_language": "宋式美学、水墨艺术、东方留白、现代极简视觉语言。",
+                "emotional_direction": "安静、克制、雅致、空灵、文化沉淀。",
+                "user_experience_goal": "让用户感受到一张真实宣纸在空气中被自然唤醒的过程，而不是观看普通纸张动画。"
+            },
+            "environment_system": {
+                "space_type": "Digital Oriental Art Space",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "rice paper surface",
+                            "paper fibers",
+                            "ink texture"
+                        ],
+                        "behavior": "展示宣纸纤维、墨迹细节和材质触感。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "floating paper layers",
+                            "soft wind flow",
+                            "ink shadow"
+                        ],
+                        "behavior": "通过纸张层叠和空间漂浮建立东方空间层次。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "white empty space",
+                            "soft mist",
+                            "natural light"
+                        ],
+                        "behavior": "保持大量留白，强化东方极简气质。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "traditional rice paper",
+                    "ink",
+                    "natural fiber"
+                ],
+                "material_properties": {
+                    "surface": "soft fibrous paper texture",
+                    "texture": "visible paper fibers and handmade imperfections",
+                    "reflection": "soft diffuse reflection",
+                    "roughness": "medium-high",
+                    "transparency": "slightly translucent"
+                },
+                "realism_style": "Photorealistic Traditional Material Rendering"
+            },
+            "form_system": {
+                "object_type": "Floating Paper Artwork",
+                "shape_language": {
+                    "geometry": "soft organic paper form",
+                    "symmetry": "asymmetric",
+                    "variation": "natural folding variation",
+                    "imperfection": "handmade edges, fiber irregularity, subtle wrinkles"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Organic Wind Driven Motion",
+                "movement_logic": "宣纸不会主动运动，而是受到自然风场影响产生柔和弯曲、展开和墨迹变化。",
+                "physics_rules": [
+                    "wind force",
+                    "cloth simulation",
+                    "paper elasticity",
+                    "ink diffusion"
+                ],
+                "motion_behavior": [
+                    "slow paper deformation",
+                    "gentle folding",
+                    "ink spreading",
+                    "fiber shadow movement",
+                    "airflow response"
+                ],
+                "speed_level": "Very Slow",
+                "rhythm_pattern": "Poetic Breathing Rhythm",
+                "loop_type": "Continuous Natural Flow"
+            },
+            "camera_system": {
+                "camera_style": "Oriental Cinematic Macro Camera",
+                "movement": "Slow horizontal movement with gentle depth shift",
+                "depth_effect": "Layered paper depth with shallow focus",
+                "focus_strategy": "Highlight paper texture, ink details and negative space"
+            },
+            "lighting_system": {
+                "lighting_type": "Soft Natural Window Light",
+                "light_behavior": "Gentle light passing through paper fibers",
+                "shadow_behavior": "Soft paper shadow movement",
+                "atmosphere": "Quiet oriental studio atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll interaction",
+                "response": "Wind direction and ink visibility subtly respond to user movement",
+                "interaction_strength": "Low",
+                "recovery_behavior": "Paper slowly returns to original balanced position"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "Cloth Simulation",
+                    "GLSL Shader",
+                    "Alpha Texture",
+                    "Displacement Map",
+                    "Ink Diffusion Shader"
+                ],
+                "render_method": "Real-time Material and Cloth Simulation Rendering",
+                "performance_strategy": "Optimized cloth deformation with shader-driven texture animation"
+            },
+            "animation_token": {
+                "duration": "12-40 seconds",
+                "easing": "cubic-bezier(0.25,1,0.5,1)",
+                "delay": "600-1200ms",
+                "movement_range": "2%-5% paper deformation",
+                "frequency": "Low Frequency Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Culture",
+                    "Luxury Brand",
+                    "Art Exhibition",
+                    "Architecture",
+                    "Editorial Design"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Brand Story",
+                    "Cultural Introduction",
+                    "Transition Scene"
+                ],
+                "content_type": [
+                    "cultural storytelling",
+                    "art presentation",
+                    "brand philosophy"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "real paper texture",
+                    "natural wind behavior",
+                    "ink material interaction",
+                    "oriental negative space",
+                    "slow elegant movement"
+                ],
+                "avoid": [
+                    "fast paper movement",
+                    "excessive ink spreading",
+                    "dramatic folding",
+                    "over-decoration"
+                ],
+                "forbidden": [
+                    "particle ink effect",
+                    "digital brush explosion",
+                    "neon calligraphy",
+                    "cyber oriental style",
+                    "glowing symbols",
+                    "fast animation"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic oriental paper environment, traditional Chinese rice paper floating gently in natural wind, realistic paper fibers and handmade texture, subtle ink diffusion across surface, soft sunlight passing through translucent paper, Song dynasty aesthetics, minimal white space composition, poetic and elegant atmosphere, photorealistic material rendering, slow cinematic camera movement, no particles, no neon, no fantasy effects, no visual noise."
+        },
+        {
+            "id": "MOTION-008",
+            "identity": {
+                "name_cn": "墨境扩散系统",
+                "name_en": "Ink Realm Diffusion Motion",
+                "category": "Cultural Fluid Material Motion",
+                "scene_type": "Oriental Abstract Artistic Environment",
+                "keywords": [
+                    "ink",
+                    "water",
+                    "calligraphy",
+                    "oriental",
+                    "fluid",
+                    "cinematic"
+                ],
+                "description": "以中国水墨艺术中的墨与水关系为核心，通过墨色自然扩散、层次渗透、流体融合和空间变化，构建具有东方哲学和时间感的数字艺术空间。"
+            },
+            "design_intent": {
+                "core_idea": "将传统水墨中的留白、晕染和流动转化为数字空间语言，通过墨色变化表现东方时间与情绪。",
+                "visual_language": "宋式美学、水墨山水、东方极简、现代数字艺术语言。",
+                "emotional_direction": "空灵、深邃、安静、诗意、哲思。",
+                "user_experience_goal": "让用户感受到墨在水中自然生长的过程，形成具有生命力的东方数字艺术体验。"
+            },
+            "environment_system": {
+                "space_type": "Digital Ink Art Space",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "ink flow",
+                            "water surface",
+                            "ink texture details"
+                        ],
+                        "behavior": "展示墨色边缘、浓淡变化和水墨融合细节。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "ink cloud",
+                            "abstract mountain shapes",
+                            "fluid layers"
+                        ],
+                        "behavior": "通过墨色层次形成空间结构和视觉叙事。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "white paper space",
+                            "soft mist",
+                            "empty atmosphere"
+                        ],
+                        "behavior": "保持东方留白，增强空间深度和情绪。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "ink",
+                    "water",
+                    "rice paper"
+                ],
+                "material_properties": {
+                    "surface": "fluid organic ink surface",
+                    "texture": "natural ink density variation and water diffusion pattern",
+                    "reflection": "soft water reflection",
+                    "roughness": "variable",
+                    "transparency": "semi-transparent layered fluid"
+                },
+                "realism_style": "Physically Based Fluid Material Rendering"
+            },
+            "form_system": {
+                "object_type": "Organic Ink Flow Structure",
+                "shape_language": {
+                    "geometry": "fluid organic deformation",
+                    "symmetry": "asymmetric",
+                    "variation": "high natural variation",
+                    "imperfection": "irregular ink edges, natural diffusion boundaries"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Fluid Diffusion Motion",
+                "movement_logic": "墨色通过水的扩散规律自然变化，不进行人为控制的快速流动。",
+                "physics_rules": [
+                    "fluid diffusion",
+                    "water absorption",
+                    "density variation",
+                    "surface tension"
+                ],
+                "motion_behavior": [
+                    "slow ink spreading",
+                    "density transition",
+                    "fluid merging",
+                    "edge diffusion",
+                    "layer evolution"
+                ],
+                "speed_level": "Very Slow",
+                "rhythm_pattern": "Poetic Organic Flow Rhythm",
+                "loop_type": "Continuous Natural Diffusion Loop"
+            },
+            "camera_system": {
+                "camera_style": "Oriental Cinematic Macro Camera",
+                "movement": "Slow floating camera with subtle depth movement",
+                "depth_effect": "Layered ink depth and atmospheric focus",
+                "focus_strategy": "Highlight ink texture, diffusion edge and negative space"
+            },
+            "lighting_system": {
+                "lighting_type": "Soft Diffused Studio Light",
+                "light_behavior": "Gentle illumination revealing ink density changes",
+                "shadow_behavior": "Soft transparent shadow transition",
+                "atmosphere": "Quiet ink studio atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll interaction",
+                "response": "User movement subtly changes ink direction and diffusion speed",
+                "interaction_strength": "Low",
+                "recovery_behavior": "Ink gradually returns to original balanced composition"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "GLSL Fluid Shader",
+                    "Reaction Diffusion",
+                    "Noise Function",
+                    "Framebuffer Simulation",
+                    "PBR Paper Material"
+                ],
+                "render_method": "Real-time Fluid Simulation Rendering",
+                "performance_strategy": "GPU shader-based fluid calculation with controlled resolution"
+            },
+            "animation_token": {
+                "duration": "15-60 seconds",
+                "easing": "cubic-bezier(0.16,1,0.3,1)",
+                "delay": "800-1800ms",
+                "movement_range": "3%-8% fluid expansion",
+                "frequency": "Low Frequency Organic Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Culture",
+                    "Luxury Brand",
+                    "Art Exhibition",
+                    "Editorial Design",
+                    "Architecture"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Brand Story",
+                    "Cultural Narrative",
+                    "Transition Scene"
+                ],
+                "content_type": [
+                    "art storytelling",
+                    "cultural presentation",
+                    "emotional atmosphere"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "natural ink diffusion",
+                    "water interaction",
+                    "oriental negative space",
+                    "slow fluid evolution",
+                    "minimal composition"
+                ],
+                "avoid": [
+                    "fast ink explosion",
+                    "random splash",
+                    "excessive black coverage",
+                    "over-complicated patterns"
+                ],
+                "forbidden": [
+                    "particle ink effect",
+                    "ink explosion animation",
+                    "neon calligraphy",
+                    "cyber oriental style",
+                    "glowing symbols",
+                    "rapid fluid transformation"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic oriental ink environment, traditional Chinese ink slowly diffusing in water on handmade rice paper, realistic fluid behavior, elegant ink density transitions, soft white space composition, Song dynasty aesthetics, poetic minimal visual language, deep atmospheric layers, photorealistic material rendering, slow cinematic camera movement, calm philosophical atmosphere, no particles, no neon, no digital effects, no visual noise."
+        },
+        {
+            "id": "MOTION-009",
+            "identity": {
+                "name_cn": "陶瓷空间系统",
+                "name_en": "Ceramic Heritage Material Motion",
+                "category": "Cultural Material Motion",
+                "scene_type": "Luxury Craft Material Environment",
+                "keywords": [
+                    "ceramic",
+                    "porcelain",
+                    "glaze",
+                    "craft",
+                    "heritage",
+                    "cinematic"
+                ],
+                "description": "以东方陶瓷、釉面、窑变纹理为核心，通过釉色变化、光泽流动、微观纹理呈现和空间光影变化，打造具有收藏级质感的数字陶瓷艺术体验。"
+            },
+            "design_intent": {
+                "core_idea": "将千年陶瓷烧制过程中形成的釉色变化和材质记忆转化为数字空间中的动态艺术语言。",
+                "visual_language": "宋瓷美学、东方器物美学、高级展览空间、奢侈品材质摄影。",
+                "emotional_direction": "温润、雅致、克制、收藏感、历史沉淀。",
+                "user_experience_goal": "让用户感受到陶瓷表面隐藏的温度、光泽和时间痕迹，而非简单展示一个三维模型。"
+            },
+            "environment_system": {
+                "space_type": "Digital Ceramic Exhibition Space",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "porcelain object",
+                            "ceramic glaze surface",
+                            "handcrafted details"
+                        ],
+                        "behavior": "展示陶瓷釉面、纹理和手工痕迹。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "ceramic collection",
+                            "soft reflection",
+                            "gallery environment"
+                        ],
+                        "behavior": "通过器物组合和空间关系形成展览层次。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "minimal gallery wall",
+                            "soft shadow",
+                            "ambient light"
+                        ],
+                        "behavior": "提供高级博物馆式空间氛围。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "porcelain",
+                    "ceramic glaze",
+                    "stoneware",
+                    "jade-like ceramic"
+                ],
+                "material_properties": {
+                    "surface": "smooth glazed ceramic surface",
+                    "texture": "fine ceramic pores, glaze variation, handmade marks",
+                    "reflection": "soft glossy ceramic reflection",
+                    "roughness": "low-medium",
+                    "transparency": "slightly translucent porcelain body"
+                },
+                "realism_style": "Ultra Realistic Ceramic PBR Rendering"
+            },
+            "form_system": {
+                "object_type": "Ceramic Artwork Object",
+                "shape_language": {
+                    "geometry": "elegant organic vessel form",
+                    "symmetry": "balanced with handmade irregularity",
+                    "variation": "natural craft variation",
+                    "imperfection": "kiln marks, glaze flow, subtle surface irregularities"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Material Surface Evolution Motion",
+                "movement_logic": "陶瓷主体保持稳定，通过釉面光泽、色彩层次和环境光变化表现材质生命感。",
+                "physics_rules": [
+                    "light reflection",
+                    "surface absorption",
+                    "material aging",
+                    "glaze behavior"
+                ],
+                "motion_behavior": [
+                    "slow glaze reflection movement",
+                    "subtle color depth transition",
+                    "surface highlight evolution",
+                    "light passing across ceramic curve",
+                    "micro texture reveal"
+                ],
+                "speed_level": "Extremely Slow",
+                "rhythm_pattern": "Museum Exhibition Rhythm",
+                "loop_type": "Continuous Material Showcase Loop"
+            },
+            "camera_system": {
+                "camera_style": "Luxury Product Photography Camera",
+                "movement": "Slow orbit around ceramic object with macro detail transition",
+                "depth_effect": "Shallow depth of field with layered focus",
+                "focus_strategy": "Highlight glaze texture, craftsmanship and silhouette"
+            },
+            "lighting_system": {
+                "lighting_type": "Soft Museum Gallery Lighting",
+                "light_behavior": "Controlled light movement revealing ceramic glaze",
+                "shadow_behavior": "Soft elegant shadow transition",
+                "atmosphere": "Quiet premium exhibition atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll interaction",
+                "response": "Viewing angle and light reflection subtly change according to user movement",
+                "interaction_strength": "Low",
+                "recovery_behavior": "Ceramic object returns smoothly to original presentation angle"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "PBR Material",
+                    "Subsurface Scattering",
+                    "Environment Reflection",
+                    "Normal Mapping",
+                    "Procedural Glaze Shader"
+                ],
+                "render_method": "Real-time Luxury Material Rendering",
+                "performance_strategy": "Optimized ceramic shader with high-quality reflection control"
+            },
+            "animation_token": {
+                "duration": "15-45 seconds",
+                "easing": "cubic-bezier(0.16,1,0.3,1)",
+                "delay": "800-1500ms",
+                "movement_range": "1%-3% camera and lighting variation",
+                "frequency": "Very Low Frequency Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Luxury Brand",
+                    "Culture",
+                    "Art Exhibition",
+                    "Interior Design",
+                    "Craftsmanship"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Product Showcase",
+                    "Brand Story",
+                    "Collection Display"
+                ],
+                "content_type": [
+                    "craft storytelling",
+                    "luxury presentation",
+                    "cultural heritage"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "realistic ceramic texture",
+                    "glaze reflection",
+                    "craft imperfection",
+                    "museum lighting",
+                    "slow elegant motion"
+                ],
+                "avoid": [
+                    "excessive rotation",
+                    "artificial glowing material",
+                    "rapid color changes",
+                    "over-animation"
+                ],
+                "forbidden": [
+                    "particle ceramic effect",
+                    "neon glaze",
+                    "cyber porcelain",
+                    "holographic material",
+                    "fast object movement",
+                    "game-style rendering"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic ceramic artwork experience, elegant Chinese porcelain object with realistic glaze texture, subtle kiln marks and handcrafted imperfections, soft museum lighting moving across curved ceramic surface, Song dynasty porcelain aesthetics, luxury gallery atmosphere, photorealistic PBR material, slow cinematic camera orbit, calm and timeless visual language, no particles, no neon, no futuristic effects, no visual noise."
+        },
+        {
+            "id": "MOTION-010",
+            "identity": {
+                "name_cn": "茶境蒸汽系统",
+                "name_en": "Tea Ceremony Steam Motion",
+                "category": "Cultural Atmosphere Motion",
+                "scene_type": "Oriental Lifestyle Environment",
+                "keywords": [
+                    "tea",
+                    "steam",
+                    "ceremony",
+                    "mist",
+                    "oriental",
+                    "cinematic"
+                ],
+                "description": "以东方茶文化中的热气、茶汤、器物和空气流动为核心，通过蒸汽升腾、液体光泽、温度变化和空间氛围，构建具有东方禅意与高级生活美学的数字体验。"
+            },
+            "design_intent": {
+                "core_idea": "将品茶过程中短暂而优雅的蒸汽变化转化为数字空间语言，通过温度、时间和空气流动表现东方生活哲学。",
+                "visual_language": "宋式茶空间、东方禅意美学、极简生活方式、高级静物摄影。",
+                "emotional_direction": "宁静、温暖、克制、雅致、慢生活。",
+                "user_experience_goal": "让用户感受到茶香、温度和空间气息，而不是简单展示烟雾效果。"
+            },
+            "environment_system": {
+                "space_type": "Digital Tea Ceremony Space",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "ceramic tea cup",
+                            "tea liquid",
+                            "steam surface"
+                        ],
+                        "behavior": "展示茶器材质、液体光泽和蒸汽细节。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "rising steam",
+                            "wooden table",
+                            "soft shadow"
+                        ],
+                        "behavior": "通过蒸汽层次和器物关系建立空间氛围。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "minimal tea room",
+                            "paper screen",
+                            "soft natural light"
+                        ],
+                        "behavior": "形成安静、留白的东方空间背景。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "steam",
+                    "tea liquid",
+                    "ceramic",
+                    "wood"
+                ],
+                "material_properties": {
+                    "surface": "soft translucent atmospheric surface",
+                    "texture": "natural vapor density and liquid reflection",
+                    "reflection": "soft ceramic and tea surface reflection",
+                    "roughness": "variable",
+                    "transparency": "semi-transparent volumetric steam"
+                },
+                "realism_style": "Photorealistic Volumetric Material Rendering"
+            },
+            "form_system": {
+                "object_type": "Tea Atmosphere Composition",
+                "shape_language": {
+                    "geometry": "organic fluid vapor form",
+                    "symmetry": "asymmetric",
+                    "variation": "natural steam variation",
+                    "imperfection": "irregular vapor movement and density change"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Volumetric Organic Motion",
+                "movement_logic": "蒸汽受到温度差和空气流动影响自然升起，不形成规则烟雾轨迹。",
+                "physics_rules": [
+                    "heat convection",
+                    "air diffusion",
+                    "density change",
+                    "gravity"
+                ],
+                "motion_behavior": [
+                    "slow steam rising",
+                    "gentle vapor expansion",
+                    "airflow response",
+                    "density variation",
+                    "light diffusion change"
+                ],
+                "speed_level": "Very Slow",
+                "rhythm_pattern": "Meditative Breathing Rhythm",
+                "loop_type": "Natural Continuous Vapor Loop"
+            },
+            "camera_system": {
+                "camera_style": "Luxury Still Life Cinematic Camera",
+                "movement": "Slow macro push-in with subtle lateral movement",
+                "depth_effect": "Shallow depth of field with atmospheric layering",
+                "focus_strategy": "Highlight steam, ceramic texture and tea surface details"
+            },
+            "lighting_system": {
+                "lighting_type": "Warm Natural Window Lighting",
+                "light_behavior": "Soft sunlight passing through steam layers",
+                "shadow_behavior": "Gentle shadow movement from vapor diffusion",
+                "atmosphere": "Quiet oriental tea room atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll interaction",
+                "response": "Camera perspective and steam direction subtly react to user movement",
+                "interaction_strength": "Very Low",
+                "recovery_behavior": "Steam gradually returns to natural rising state"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "Volumetric Shader",
+                    "Noise Function",
+                    "Fluid Simulation",
+                    "PBR Material",
+                    "Light Scattering"
+                ],
+                "render_method": "Real-time Volumetric Atmosphere Rendering",
+                "performance_strategy": "Shader-based vapor simulation with optimized volumetric sampling"
+            },
+            "animation_token": {
+                "duration": "15-50 seconds",
+                "easing": "cubic-bezier(0.22,1,0.36,1)",
+                "delay": "800-1600ms",
+                "movement_range": "3%-8% vapor displacement",
+                "frequency": "Low Frequency Organic Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Luxury Brand",
+                    "Tea Brand",
+                    "Culture",
+                    "Hospitality",
+                    "Lifestyle"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Brand Story",
+                    "Product Showcase",
+                    "Experience Scene"
+                ],
+                "content_type": [
+                    "lifestyle storytelling",
+                    "cultural atmosphere",
+                    "brand philosophy"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "natural steam behavior",
+                    "ceramic material",
+                    "warm lighting",
+                    "oriental atmosphere",
+                    "slow elegant movement"
+                ],
+                "avoid": [
+                    "thick artificial smoke",
+                    "dramatic fog",
+                    "fast vapor movement",
+                    "fantasy atmosphere"
+                ],
+                "forbidden": [
+                    "particle smoke",
+                    "neon steam",
+                    "magic vapor",
+                    "cyber tea room",
+                    "glowing mist",
+                    "rapid smoke animation"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic tea ceremony environment, elegant ceramic tea cup with warm tea liquid, realistic steam slowly rising through soft sunlight, traditional oriental tea room atmosphere, Song dynasty aesthetics, natural wood and ceramic materials, calm minimal composition, photorealistic volumetric rendering, luxury lifestyle visual language, slow macro cinematic camera movement, peaceful and timeless feeling, no particles, no neon, no fantasy smoke, no visual noise."
+        },
+        {
+            "id": "MOTION-011",
+            "identity": {
+                "name_cn": "玻璃建筑系统",
+                "name_en": "Architectural Glass Light Motion",
+                "category": "Architectural Material Motion",
+                "scene_type": "Luxury Digital Architecture Environment",
+                "keywords": [
+                    "glass",
+                    "architecture",
+                    "reflection",
+                    "light",
+                    "space",
+                    "cinematic"
+                ],
+                "description": "以建筑玻璃、透明结构和自然光线关系为核心，通过折射、反射、光影变化和空间穿透感，创造具有高级建筑美学的数字空间体验。"
+            },
+            "design_intent": {
+                "core_idea": "将现代建筑中的玻璃、光线与空间关系转化为数字叙事，通过透明材质表现空间、时间和自然之间的联系。",
+                "visual_language": "现代建筑摄影、极简主义建筑、高级画廊空间、电影级建筑纪录片。",
+                "emotional_direction": "纯净、开放、未来感、宁静、秩序感。",
+                "user_experience_goal": "让用户感受到进入一座真实建筑空间中的光影变化，而不是观看简单玻璃特效。"
+            },
+            "environment_system": {
+                "space_type": "Digital Architectural Space",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "glass panels",
+                            "architectural edges",
+                            "transparent surfaces"
+                        ],
+                        "behavior": "展示玻璃细节、边缘折射和材质透明关系。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "glass structure",
+                            "reflected environment",
+                            "light layers"
+                        ],
+                        "behavior": "通过透明结构和反射建立建筑空间深度。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "minimal architecture",
+                            "sky environment",
+                            "natural landscape"
+                        ],
+                        "behavior": "形成开放、纯净的建筑环境背景。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "architectural glass",
+                    "crystal glass",
+                    "transparent surface",
+                    "metal frame"
+                ],
+                "material_properties": {
+                    "surface": "smooth transparent architectural glass",
+                    "texture": "subtle optical distortion and reflection variation",
+                    "reflection": "dynamic environment reflection",
+                    "roughness": "very low",
+                    "transparency": "high transparency with realistic refraction"
+                },
+                "realism_style": "Ultra Realistic Architectural PBR Rendering"
+            },
+            "form_system": {
+                "object_type": "Modern Glass Architecture Structure",
+                "shape_language": {
+                    "geometry": "clean architectural geometry",
+                    "symmetry": "balanced geometric structure",
+                    "variation": "controlled spatial variation",
+                    "imperfection": "natural glass reflection distortion and subtle surface variation"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Architectural Light Interaction Motion",
+                "movement_logic": "建筑主体保持稳定，通过光线移动、反射变化和空间视角变化表现建筑生命感。",
+                "physics_rules": [
+                    "light refraction",
+                    "reflection",
+                    "camera parallax",
+                    "environment illumination"
+                ],
+                "motion_behavior": [
+                    "slow reflection movement",
+                    "light passing through glass",
+                    "subtle refraction change",
+                    "shadow movement",
+                    "environment reflection evolution"
+                ],
+                "speed_level": "Very Slow",
+                "rhythm_pattern": "Architectural Time Rhythm",
+                "loop_type": "Continuous Light Evolution Loop"
+            },
+            "camera_system": {
+                "camera_style": "Luxury Architectural Film Camera",
+                "movement": "Slow cinematic camera fly-through with controlled perspective shift",
+                "depth_effect": "Large architectural depth with layered transparency",
+                "focus_strategy": "Highlight glass structure, reflections and spatial relationships"
+            },
+            "lighting_system": {
+                "lighting_type": "Natural Architectural Daylight",
+                "light_behavior": "Slow sunlight movement across glass surfaces",
+                "shadow_behavior": "Soft architectural shadow transition",
+                "atmosphere": "Minimal modern architecture atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll interaction",
+                "response": "Glass reflection, camera perspective and light direction subtly respond to user movement",
+                "interaction_strength": "Low",
+                "recovery_behavior": "Lighting and reflection smoothly return to original composition"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "PBR Material",
+                    "Screen Space Reflection",
+                    "Environment Mapping",
+                    "Ray Marching",
+                    "Refraction Shader"
+                ],
+                "render_method": "Real-time Architectural Visualization Rendering",
+                "performance_strategy": "Optimized transparent rendering with controlled reflection calculations"
+            },
+            "animation_token": {
+                "duration": "20-60 seconds",
+                "easing": "cubic-bezier(0.16,1,0.3,1)",
+                "delay": "1000-2000ms",
+                "movement_range": "1%-5% camera and lighting variation",
+                "frequency": "Low Frequency Cinematic Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Architecture",
+                    "Luxury Brand",
+                    "Real Estate",
+                    "Interior Design",
+                    "Digital Art"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Architecture Showcase",
+                    "Brand Experience",
+                    "Space Narrative"
+                ],
+                "content_type": [
+                    "architectural storytelling",
+                    "spatial experience",
+                    "luxury presentation"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "realistic glass material",
+                    "natural reflection",
+                    "architectural depth",
+                    "cinematic lighting",
+                    "slow spatial movement"
+                ],
+                "avoid": [
+                    "excessive transparency",
+                    "futuristic effects",
+                    "rapid camera movement",
+                    "overcomplicated geometry"
+                ],
+                "forbidden": [
+                    "particle glass effect",
+                    "neon architecture",
+                    "holographic building",
+                    "cyber city style",
+                    "glowing glass",
+                    "fast camera animation"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic architectural glass environment, elegant modern glass building with realistic transparent surfaces, natural reflections and refractions, soft daylight passing through architectural structures, minimal luxury architecture aesthetics, calm spatial composition, photorealistic PBR rendering, slow cinematic camera movement, high-end architectural visualization, no particles, no neon, no futuristic HUD, no visual noise."
+        },
+        {
+            "id": "MOTION-012",
+            "identity": {
+                "name_cn": "岩石岁月系统",
+                "name_en": "Stone Time Evolution Motion",
+                "category": "Natural Material Motion",
+                "scene_type": "Ancient Geological Environment",
+                "keywords": [
+                    "stone",
+                    "rock",
+                    "erosion",
+                    "time",
+                    "geology",
+                    "cinematic"
+                ],
+                "description": "以天然岩石、矿物纹理和地质时间为核心，通过岩层细节、光影变化、表面风化痕迹和环境交互，创造具有亿万年时间尺度的数字自然材质体验。"
+            },
+            "design_intent": {
+                "core_idea": "将岩石经历漫长岁月形成的纹理、裂隙和风化痕迹转化为数字空间中的时间叙事。",
+                "visual_language": "自然地质摄影、博物馆展陈美学、极简景观设计、电影级纪录片视觉。",
+                "emotional_direction": "厚重、永恒、安静、力量、时间沉淀。",
+                "user_experience_goal": "让用户感受到岩石内部隐藏的时间故事，而不是观看普通石材展示。"
+            },
+            "environment_system": {
+                "space_type": "Digital Geological Landscape",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "rock surface",
+                            "mineral texture",
+                            "stone cracks"
+                        ],
+                        "behavior": "展示岩石表面细节、矿物结构和自然痕迹。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "rock formation",
+                            "stone layers",
+                            "natural erosion"
+                        ],
+                        "behavior": "通过岩层关系表现地质空间和时间深度。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "mountain landscape",
+                            "atmospheric haze",
+                            "natural environment"
+                        ],
+                        "behavior": "建立宏大的自然尺度和空间延展感。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "granite",
+                    "marble",
+                    "basalt",
+                    "mineral stone"
+                ],
+                "material_properties": {
+                    "surface": "rough natural stone surface",
+                    "texture": "geological layers, cracks, mineral patterns",
+                    "reflection": "subtle mineral reflection",
+                    "roughness": "high",
+                    "transparency": "opaque with mineral depth"
+                },
+                "realism_style": "Ultra Realistic Geological PBR Rendering"
+            },
+            "form_system": {
+                "object_type": "Natural Rock Formation",
+                "shape_language": {
+                    "geometry": "irregular geological structure",
+                    "symmetry": "asymmetric",
+                    "variation": "large natural variation",
+                    "imperfection": "erosion marks, cracks, mineral irregularities"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Time Scale Material Evolution",
+                "movement_logic": "岩石主体保持稳定，通过光影、环境变化和微观材质变化表现漫长时间过程。",
+                "physics_rules": [
+                    "erosion",
+                    "temperature change",
+                    "mineral reflection",
+                    "environment interaction"
+                ],
+                "motion_behavior": [
+                    "slow light movement across stone",
+                    "subtle mineral texture reveal",
+                    "shadow evolution",
+                    "atmospheric change",
+                    "micro surface detail transition"
+                ],
+                "speed_level": "Extremely Slow",
+                "rhythm_pattern": "Ancient Time Rhythm",
+                "loop_type": "Infinite Geological Time Loop"
+            },
+            "camera_system": {
+                "camera_style": "Cinematic Geological Documentary Camera",
+                "movement": "Slow macro-to-wide camera transition",
+                "depth_effect": "Deep environmental depth with macro texture focus",
+                "focus_strategy": "Reveal both microscopic stone details and geological scale"
+            },
+            "lighting_system": {
+                "lighting_type": "Natural Desert / Mountain Light",
+                "light_behavior": "Slow sunlight movement revealing rock texture",
+                "shadow_behavior": "Gradual geological shadow transition",
+                "atmosphere": "Ancient natural landscape atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll interaction",
+                "response": "Camera distance and lighting angle subtly change with user exploration",
+                "interaction_strength": "Low",
+                "recovery_behavior": "Scene smoothly returns to original geological composition"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "PBR Material",
+                    "Displacement Mapping",
+                    "Normal Mapping",
+                    "Procedural Rock Shader",
+                    "Ambient Occlusion"
+                ],
+                "render_method": "Real-time Geological Material Rendering",
+                "performance_strategy": "Optimized terrain shader with procedural texture generation"
+            },
+            "animation_token": {
+                "duration": "30-120 seconds",
+                "easing": "linear cinematic interpolation",
+                "delay": "1200-2500ms",
+                "movement_range": "0.5%-2% material evolution",
+                "frequency": "Ultra Low Frequency Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Architecture",
+                    "Luxury Brand",
+                    "Landscape Design",
+                    "Culture",
+                    "Digital Art"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Brand Philosophy",
+                    "Material Showcase",
+                    "Immersive Experience"
+                ],
+                "content_type": [
+                    "natural storytelling",
+                    "material philosophy",
+                    "environment experience"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "realistic stone texture",
+                    "geological details",
+                    "natural lighting",
+                    "slow evolution",
+                    "large spatial feeling"
+                ],
+                "avoid": [
+                    "rock explosion",
+                    "dramatic destruction",
+                    "fast erosion",
+                    "fantasy geology"
+                ],
+                "forbidden": [
+                    "particle rock effect",
+                    "floating stones",
+                    "energy cracks",
+                    "neon minerals",
+                    "sci-fi landscape",
+                    "game-like terrain"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic geological environment, ancient natural stone formation with realistic mineral layers, erosion marks and deep rock texture, soft natural sunlight revealing geological details, timeless mountain atmosphere, luxury minimal visual language, photorealistic PBR rendering, slow cinematic camera movement, documentary style, powerful and quiet feeling, no particles, no neon, no fantasy effects, no visual noise."
+        },
+        {
+            "id": "MOTION-013",
+            "identity": {
+                "name_cn": "森林呼吸系统",
+                "name_en": "Forest Breathing Ecosystem Motion",
+                "category": "Natural Environment Motion",
+                "scene_type": "Immersive Forest Landscape",
+                "keywords": [
+                    "forest",
+                    "tree",
+                    "light",
+                    "wind",
+                    "nature",
+                    "cinematic"
+                ],
+                "description": "以森林生态系统、树木、空气和自然光线为核心，通过树叶微动、光线穿透、空气流动和环境变化，创造具有生命循环感的数字自然体验。"
+            },
+            "design_intent": {
+                "core_idea": "将森林中的空气、光线和植物生命运动转化为数字空间语言，通过极低频自然变化表现生态生命力。",
+                "visual_language": "自然纪录片摄影、东方园林美学、现代生态建筑、电影级环境叙事。",
+                "emotional_direction": "宁静、治愈、生命、平衡、自然共生。",
+                "user_experience_goal": "让用户感受到置身真实森林中的空气变化和生命节奏，而不是观看普通植物动画。"
+            },
+            "environment_system": {
+                "space_type": "Digital Forest Ecosystem",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "tree bark",
+                            "moss",
+                            "leaves",
+                            "forest floor"
+                        ],
+                        "behavior": "展示树皮纹理、苔藓细节和植物微观结构。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "trees",
+                            "moving leaves",
+                            "light rays",
+                            "natural haze"
+                        ],
+                        "behavior": "通过树木层次和光影变化建立森林空间深度。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "distant forest",
+                            "soft sunlight",
+                            "atmospheric environment"
+                        ],
+                        "behavior": "形成广阔、安静、具有空间尺度的自然背景。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "tree bark",
+                    "leaf",
+                    "moss",
+                    "natural soil"
+                ],
+                "material_properties": {
+                    "surface": "organic natural surface",
+                    "texture": "wood fiber, leaf vein, moss detail",
+                    "reflection": "soft diffuse natural reflection",
+                    "roughness": "high",
+                    "transparency": "leaf semi-transparent structure"
+                },
+                "realism_style": "Ultra Realistic Natural Ecosystem Rendering"
+            },
+            "form_system": {
+                "object_type": "Organic Forest Environment",
+                "shape_language": {
+                    "geometry": "natural irregular plant structure",
+                    "symmetry": "asymmetric",
+                    "variation": "high biological variation",
+                    "imperfection": "natural growth pattern, irregular branches and leaves"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Organic Ecosystem Motion",
+                "movement_logic": "森林主体保持稳定，通过风、光和植物微运动表现生态生命循环。",
+                "physics_rules": [
+                    "wind force",
+                    "plant elasticity",
+                    "light diffusion",
+                    "natural growth pattern"
+                ],
+                "motion_behavior": [
+                    "slow leaf movement",
+                    "gentle branch response",
+                    "sunlight movement",
+                    "mist drifting",
+                    "forest atmosphere change"
+                ],
+                "speed_level": "Very Slow",
+                "rhythm_pattern": "Natural Breathing Rhythm",
+                "loop_type": "Continuous Ecosystem Cycle"
+            },
+            "camera_system": {
+                "camera_style": "Cinematic Nature Documentary Camera",
+                "movement": "Slow walking perspective with gentle forward movement",
+                "depth_effect": "Layered forest depth with atmospheric perspective",
+                "focus_strategy": "Balance macro plant details and overall forest atmosphere"
+            },
+            "lighting_system": {
+                "lighting_type": "Natural Forest Sunlight",
+                "light_behavior": "Soft sunlight passing through tree canopy",
+                "shadow_behavior": "Dynamic leaf shadow movement on environment",
+                "atmosphere": "Quiet morning forest atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll interaction",
+                "response": "Viewing angle, light direction and nearby plants subtly respond to user movement",
+                "interaction_strength": "Low",
+                "recovery_behavior": "Forest environment gradually returns to natural balance"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "Vegetation Shader",
+                    "Wind Simulation",
+                    "PBR Material",
+                    "Volumetric Light",
+                    "Procedural Environment"
+                ],
+                "render_method": "Real-time Natural Environment Rendering",
+                "performance_strategy": "GPU vegetation animation with optimized instancing and shader deformation"
+            },
+            "animation_token": {
+                "duration": "20-90 seconds",
+                "easing": "cubic-bezier(0.22,1,0.36,1)",
+                "delay": "1000-2000ms",
+                "movement_range": "1%-5% vegetation movement",
+                "frequency": "Low Frequency Organic Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Luxury Brand",
+                    "Architecture",
+                    "Wellness",
+                    "Travel",
+                    "Digital Art"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Brand Philosophy",
+                    "Immersive Experience",
+                    "Environmental Story"
+                ],
+                "content_type": [
+                    "nature storytelling",
+                    "brand atmosphere",
+                    "emotional experience"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "realistic vegetation",
+                    "natural wind movement",
+                    "soft sunlight",
+                    "forest depth",
+                    "slow ecological rhythm"
+                ],
+                "avoid": [
+                    "fast leaf movement",
+                    "fantasy forest",
+                    "excessive fog",
+                    "artificial plant animation"
+                ],
+                "forbidden": [
+                    "particle leaves",
+                    "glowing plants",
+                    "magic forest effects",
+                    "cyber nature",
+                    "neon lighting",
+                    "game-like environment"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic forest environment, ancient forest with realistic trees, moss, leaves and natural ecosystem details, soft sunlight passing through canopy, subtle wind movement, atmospheric depth, organic life rhythm, luxury nature experience, photorealistic PBR rendering, cinematic documentary camera movement, calm immersive forest atmosphere, no particles, no neon, no fantasy effects, no visual noise."
+        },
+        {
+            "id": "MOTION-014",
+            "identity": {
+                "name_cn": "水镜流光系统",
+                "name_en": "Water Mirror Reflection Motion",
+                "category": "Natural Fluid Surface Motion",
+                "scene_type": "Minimal Water Landscape Environment",
+                "keywords": [
+                    "water",
+                    "reflection",
+                    "surface",
+                    "light",
+                    "fluid",
+                    "cinematic"
+                ],
+                "description": "以水面、倒影和自然光线关系为核心，通过微弱波纹、光影变化、环境映射和水体流动，创造具有宁静感和空间深度的数字水境体验。"
+            },
+            "design_intent": {
+                "core_idea": "将水面作为连接天空、光线和空间的镜面媒介，通过极低频变化表现自然时间流动。",
+                "visual_language": "极简景观摄影、东方庭院水景、现代建筑倒影、高级电影环境设计。",
+                "emotional_direction": "宁静、纯净、空灵、平衡、时间感。",
+                "user_experience_goal": "让用户感受到真实水面的呼吸与光影变化，而不是观看普通波纹动画。"
+            },
+            "environment_system": {
+                "space_type": "Digital Water Landscape",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "water surface",
+                            "small ripples",
+                            "reflected details"
+                        ],
+                        "behavior": "展示水面细微纹理、波纹和光线细节。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "reflection",
+                            "floating objects",
+                            "shore elements"
+                        ],
+                        "behavior": "通过倒影变化和水面关系建立空间层次。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "sky",
+                            "mountains",
+                            "architecture silhouette"
+                        ],
+                        "behavior": "形成开阔、安静的自然空间背景。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "water",
+                    "glass-like surface",
+                    "natural reflection"
+                ],
+                "material_properties": {
+                    "surface": "smooth fluid reflective surface",
+                    "texture": "subtle wave distortion and reflection variation",
+                    "reflection": "dynamic environment reflection",
+                    "roughness": "low",
+                    "transparency": "semi-transparent shallow water"
+                },
+                "realism_style": "Physically Based Water Rendering"
+            },
+            "form_system": {
+                "object_type": "Natural Water Mirror Surface",
+                "shape_language": {
+                    "geometry": "organic fluid surface",
+                    "symmetry": "asymmetric",
+                    "variation": "natural wave variation",
+                    "imperfection": "irregular ripples and organic distortion"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Fluid Surface Interaction Motion",
+                "movement_logic": "水面保持整体稳定，通过微弱波动、光线变化和环境倒影表现自然流动。",
+                "physics_rules": [
+                    "surface tension",
+                    "wind influence",
+                    "gravity",
+                    "light reflection"
+                ],
+                "motion_behavior": [
+                    "slow ripple expansion",
+                    "reflection distortion",
+                    "light shimmer movement",
+                    "surface breathing",
+                    "environment transition"
+                ],
+                "speed_level": "Extremely Slow",
+                "rhythm_pattern": "Meditative Water Rhythm",
+                "loop_type": "Continuous Fluid Surface Cycle"
+            },
+            "camera_system": {
+                "camera_style": "Cinematic Landscape Reflection Camera",
+                "movement": "Slow horizontal camera glide close to water surface",
+                "depth_effect": "Reflection depth with atmospheric perspective",
+                "focus_strategy": "Balance water texture, reflection and distant environment"
+            },
+            "lighting_system": {
+                "lighting_type": "Soft Sunrise / Sunset Light",
+                "light_behavior": "Warm light gradually moving across water surface",
+                "shadow_behavior": "Subtle reflection and shadow transformation",
+                "atmosphere": "Quiet natural water landscape atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll interaction",
+                "response": "Water reflection angle and ripple direction subtly respond to user movement",
+                "interaction_strength": "Very Low",
+                "recovery_behavior": "Water gradually returns to original calm surface"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "Water Shader",
+                    "Reflection Mapping",
+                    "Normal Distortion",
+                    "Environment Mapping",
+                    "GPU Simulation"
+                ],
+                "render_method": "Real-time Physically Based Water Rendering",
+                "performance_strategy": "Shader-driven water surface with optimized reflection calculations"
+            },
+            "animation_token": {
+                "duration": "20-80 seconds",
+                "easing": "linear natural interpolation",
+                "delay": "1000-2000ms",
+                "movement_range": "0.5%-3% surface displacement",
+                "frequency": "Ultra Low Frequency Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Luxury Brand",
+                    "Architecture",
+                    "Hospitality",
+                    "Culture",
+                    "Digital Art"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Brand Story",
+                    "Experience Transition",
+                    "Atmospheric Background"
+                ],
+                "content_type": [
+                    "environment storytelling",
+                    "brand atmosphere",
+                    "visual meditation"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "realistic water surface",
+                    "natural reflection",
+                    "soft lighting",
+                    "slow fluid rhythm",
+                    "minimal composition"
+                ],
+                "avoid": [
+                    "large waves",
+                    "dramatic water movement",
+                    "excessive reflections",
+                    "artificial liquid effects"
+                ],
+                "forbidden": [
+                    "particle water effect",
+                    "water explosion",
+                    "neon reflection",
+                    "fantasy ocean",
+                    "digital liquid distortion",
+                    "fast ripple animation"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic water mirror environment, calm reflective water surface with realistic subtle ripples, natural sky and landscape reflection, soft sunrise light moving across water, minimal luxury visual language, oriental garden atmosphere, photorealistic physically based rendering, slow cinematic camera movement, peaceful and timeless feeling, no particles, no neon, no fantasy effects, no visual noise."
+        },
+        {
+            "id": "MOTION-015",
+            "identity": {
+                "name_cn": "星尘矿物系统",
+                "name_en": "Mineral Crystal Light Evolution Motion",
+                "category": "Natural Material Light Motion",
+                "scene_type": "Luxury Mineral Environment",
+                "keywords": [
+                    "crystal",
+                    "mineral",
+                    "stone",
+                    "light",
+                    "refraction",
+                    "cinematic"
+                ],
+                "description": "以天然矿物、水晶和宝石结构为核心，通过内部折射、光线穿透、材质纹理变化和空间光影演化，打造具有收藏级质感的数字矿物艺术体验。"
+            },
+            "design_intent": {
+                "core_idea": "将矿物亿万年形成的晶体结构和光学特性转化为数字空间语言，通过光与材质的关系表现自然力量。",
+                "visual_language": "高级珠宝摄影、自然矿物展览、奢侈品视觉系统、电影级微距摄影。",
+                "emotional_direction": "神秘、纯净、珍贵、稳定、永恒。",
+                "user_experience_goal": "让用户感受到矿物内部隐藏的结构和光线生命，而不是简单展示发光物体。"
+            },
+            "environment_system": {
+                "space_type": "Digital Mineral Exhibition Space",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "crystal surface",
+                            "mineral texture",
+                            "faceted structure"
+                        ],
+                        "behavior": "展示晶体切面、矿物纹理和微观结构。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "crystal cluster",
+                            "light refraction",
+                            "transparent layers"
+                        ],
+                        "behavior": "通过晶体组合和折射关系形成空间深度。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "dark exhibition space",
+                            "soft atmosphere",
+                            "ambient reflection"
+                        ],
+                        "behavior": "创造高级收藏展示环境。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "crystal",
+                    "quartz",
+                    "mineral stone",
+                    "natural gemstone"
+                ],
+                "material_properties": {
+                    "surface": "faceted mineral crystal surface",
+                    "texture": "natural crystal structure and internal patterns",
+                    "reflection": "controlled specular reflection",
+                    "roughness": "low-medium",
+                    "transparency": "semi-transparent optical depth"
+                },
+                "realism_style": "Ultra Realistic Crystal PBR Rendering"
+            },
+            "form_system": {
+                "object_type": "Natural Crystal Formation",
+                "shape_language": {
+                    "geometry": "irregular geometric crystal structure",
+                    "symmetry": "asymmetric natural growth",
+                    "variation": "organic mineral variation",
+                    "imperfection": "natural fracture lines, uneven crystal edges"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Optical Material Evolution Motion",
+                "movement_logic": "晶体结构保持稳定，通过内部光线变化、折射移动和环境反射表现材质生命感。",
+                "physics_rules": [
+                    "light refraction",
+                    "internal reflection",
+                    "material absorption",
+                    "optical dispersion"
+                ],
+                "motion_behavior": [
+                    "slow light passing through crystal",
+                    "internal reflection evolution",
+                    "subtle color dispersion",
+                    "surface highlight movement",
+                    "shadow transformation"
+                ],
+                "speed_level": "Extremely Slow",
+                "rhythm_pattern": "Luxury Exhibition Rhythm",
+                "loop_type": "Continuous Optical Evolution Loop"
+            },
+            "camera_system": {
+                "camera_style": "Luxury Jewelry Macro Camera",
+                "movement": "Slow orbit with macro focus transition",
+                "depth_effect": "Extreme shallow depth with crystal internal depth",
+                "focus_strategy": "Reveal crystal structure, refraction and material purity"
+            },
+            "lighting_system": {
+                "lighting_type": "Controlled Studio Light",
+                "light_behavior": "Soft directional light passing through crystal structure",
+                "shadow_behavior": "Precise transparent shadow transition",
+                "atmosphere": "Premium mineral exhibition atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll interaction",
+                "response": "Crystal viewing angle and light refraction subtly change according to user perspective",
+                "interaction_strength": "Very Low",
+                "recovery_behavior": "Light returns smoothly to original crystal composition"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "PBR Material",
+                    "Transmission Shader",
+                    "Refraction Shader",
+                    "Environment Mapping",
+                    "Subsurface Scattering"
+                ],
+                "render_method": "Real-time Optical Material Rendering",
+                "performance_strategy": "Optimized transparent rendering with controlled ray calculation"
+            },
+            "animation_token": {
+                "duration": "20-80 seconds",
+                "easing": "cubic-bezier(0.16,1,0.3,1)",
+                "delay": "1000-2200ms",
+                "movement_range": "1%-4% lighting variation",
+                "frequency": "Ultra Low Frequency Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Luxury Brand",
+                    "Jewelry",
+                    "Architecture",
+                    "Digital Art",
+                    "Premium Product"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Product Showcase",
+                    "Brand Story",
+                    "Collection Experience"
+                ],
+                "content_type": [
+                    "material storytelling",
+                    "luxury presentation",
+                    "visual exploration"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "realistic crystal material",
+                    "natural optical behavior",
+                    "controlled lighting",
+                    "premium exhibition feeling",
+                    "slow elegant motion"
+                ],
+                "avoid": [
+                    "excessive glow",
+                    "fantasy crystal effects",
+                    "rapid color change",
+                    "artificial energy effects"
+                ],
+                "forbidden": [
+                    "particle crystal explosion",
+                    "magic gemstone",
+                    "neon crystal",
+                    "holographic mineral",
+                    "sci-fi energy core",
+                    "game-style rendering"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic crystal mineral experience, natural quartz crystal formation with realistic internal structure, elegant light refraction through transparent mineral layers, luxury jewelry exhibition atmosphere, controlled studio lighting, photorealistic PBR material rendering, macro cinematic camera movement, timeless and sophisticated visual language, no particles, no neon, no fantasy effects, no visual noise."
+        },
+        {
+            "id": "MOTION-016",
+            "identity": {
+                "name_cn": "月影庭院系统",
+                "name_en": "Moonlight Garden Atmosphere Motion",
+                "category": "Atmospheric Environment Motion",
+                "scene_type": "Oriental Minimal Landscape Environment",
+                "keywords": [
+                    "moonlight",
+                    "garden",
+                    "shadow",
+                    "mist",
+                    "nature",
+                    "cinematic"
+                ],
+                "description": "以东方庭院、月光、植物和自然影子为核心，通过月光移动、植物微动、雾气流动和空间层次变化，创造具有诗意与高级东方美学的数字环境体验。"
+            },
+            "design_intent": {
+                "core_idea": "将东方庭院中的月光、影子和静谧夜晚转化为数字叙事空间，通过极低频变化表达时间流逝与空间情绪。",
+                "visual_language": "宋式庭院美学、东方园林、极简建筑、电影级夜景摄影。",
+                "emotional_direction": "宁静、克制、诗意、孤寂、高级。",
+                "user_experience_goal": "让用户感受到夜晚庭院中的空气、月光和空间呼吸，而不是观看普通夜景动画。"
+            },
+            "environment_system": {
+                "space_type": "Digital Oriental Moon Garden",
+                "environment_layers": [
+                    {
+                        "layer": "foreground",
+                        "elements": [
+                            "stone path",
+                            "plant leaves",
+                            "water surface",
+                            "garden texture"
+                        ],
+                        "behavior": "展示庭院材质、植物细节和月光投影。"
+                    },
+                    {
+                        "layer": "middle_ground",
+                        "elements": [
+                            "trees",
+                            "architecture silhouette",
+                            "soft mist",
+                            "moon shadow"
+                        ],
+                        "behavior": "通过庭院结构和光影关系建立空间深度。"
+                    },
+                    {
+                        "layer": "background",
+                        "elements": [
+                            "moon",
+                            "night sky",
+                            "distant landscape"
+                        ],
+                        "behavior": "形成安静、广阔的东方夜空环境。"
+                    }
+                ]
+            },
+            "material_system": {
+                "primary_material": [
+                    "stone",
+                    "wood",
+                    "water",
+                    "plant",
+                    "mist"
+                ],
+                "material_properties": {
+                    "surface": "natural outdoor material surface",
+                    "texture": "stone grain, wood fiber, leaf details",
+                    "reflection": "soft moonlight reflection",
+                    "roughness": "medium-high",
+                    "transparency": "mist semi-transparent atmosphere"
+                },
+                "realism_style": "Cinematic Night Environment Rendering"
+            },
+            "form_system": {
+                "object_type": "Oriental Garden Landscape",
+                "shape_language": {
+                    "geometry": "organic landscape composition",
+                    "symmetry": "asymmetric",
+                    "variation": "natural environmental variation",
+                    "imperfection": "irregular plants, aged stone, natural wear"
+                }
+            },
+            "motion_system": {
+                "motion_category": "Atmospheric Time Flow Motion",
+                "movement_logic": "庭院结构保持静止，通过月光、影子、植物和空气变化表现夜晚生命感。",
+                "physics_rules": [
+                    "moonlight movement",
+                    "wind interaction",
+                    "mist diffusion",
+                    "water reflection"
+                ],
+                "motion_behavior": [
+                    "slow moonlight shift",
+                    "leaf gentle movement",
+                    "mist drifting",
+                    "water reflection change",
+                    "shadow evolution"
+                ],
+                "speed_level": "Extremely Slow",
+                "rhythm_pattern": "Night Meditation Rhythm",
+                "loop_type": "Continuous Night Atmosphere Cycle"
+            },
+            "camera_system": {
+                "camera_style": "Cinematic Oriental Landscape Camera",
+                "movement": "Slow forward movement through garden space",
+                "depth_effect": "Atmospheric depth with layered shadows",
+                "focus_strategy": "Balance foreground texture, moonlight and distant space"
+            },
+            "lighting_system": {
+                "lighting_type": "Natural Moonlight",
+                "light_behavior": "Slow moonlight movement across garden surfaces",
+                "shadow_behavior": "Soft tree shadow transition",
+                "atmosphere": "Quiet midnight garden atmosphere"
+            },
+            "interaction_system": {
+                "trigger": "Mouse movement / Scroll interaction",
+                "response": "Viewing perspective, moonlight angle and environmental details subtly respond to user movement",
+                "interaction_strength": "Very Low",
+                "recovery_behavior": "Scene gradually returns to original calm composition"
+            },
+            "technical_system": {
+                "engine": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "WebGL"
+                ],
+                "technology": [
+                    "Volumetric Lighting",
+                    "Shadow Mapping",
+                    "PBR Material",
+                    "Wind Shader",
+                    "Atmospheric Fog"
+                ],
+                "render_method": "Real-time Cinematic Environment Rendering",
+                "performance_strategy": "Optimized atmospheric rendering with lightweight environmental simulation"
+            },
+            "animation_token": {
+                "duration": "30-120 seconds",
+                "easing": "linear cinematic interpolation",
+                "delay": "1200-2500ms",
+                "movement_range": "0.5%-3% environmental change",
+                "frequency": "Ultra Low Frequency Motion"
+            },
+            "application_context": {
+                "industries": [
+                    "Luxury Brand",
+                    "Architecture",
+                    "Culture",
+                    "Hospitality",
+                    "Digital Art"
+                ],
+                "page_sections": [
+                    "Hero Section",
+                    "Brand Philosophy",
+                    "Immersive Experience",
+                    "Atmospheric Transition"
+                ],
+                "content_type": [
+                    "emotional storytelling",
+                    "cultural atmosphere",
+                    "space experience"
+                ]
+            },
+            "constraints": {
+                "must_include": [
+                    "realistic moonlight",
+                    "oriental garden atmosphere",
+                    "soft shadow movement",
+                    "natural environment",
+                    "slow cinematic rhythm"
+                ],
+                "avoid": [
+                    "dramatic night effects",
+                    "heavy fog",
+                    "fantasy scenery",
+                    "excessive animation"
+                ],
+                "forbidden": [
+                    "particle stars",
+                    "magic moonlight",
+                    "neon garden",
+                    "cyber oriental style",
+                    "glowing plants",
+                    "game-like environment"
+                ]
+            },
+            "generation_prompt": "Ultra premium cinematic oriental moon garden environment, traditional Chinese courtyard under soft moonlight, realistic stone paths, wooden architecture, plants and subtle mist, gentle shadow movement, calm water reflection, Song dynasty aesthetic, minimal luxury atmosphere, photorealistic environment rendering, slow cinematic camera movement, poetic and timeless feeling, no particles, no neon, no fantasy effects, no visual noise."
+        }
+    ]
+}
