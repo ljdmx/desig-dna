@@ -82,7 +82,7 @@ export function toColors(d: DesignSystem): string {
   const src = colorSourceOf(d);
   const lines = src
     ? flattenEntries({ [src[0]]: src[1] } as Record<string, unknown>).map(([k, v]) => `${k}: ${v}`)
-    : [];
+    : swatchesOf(d).map(([k, hex]) => `${k}: ${hex}`);
   const hexes = Array.from(new Set(swatchesOf(d).map(([, hex]) => hex))).join(", ");
   return [`/* ${d.id} · ${nameOf(d)} */`, ...lines, ``, `HEX: ${hexes}`].join("\n");
 }

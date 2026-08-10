@@ -158,7 +158,7 @@ export const colorSourceOf = (d: DesignSystem): [string, unknown] | undefined =>
 
 export const swatchesOf = (d: DesignSystem): [string, string][] => {
   const src = colorSourceOf(d);
-  return src ? collectHexes(src[1]) : [];
+  return src ? collectHexes(src[1]) : collectHexes(d);
 };
 
 /** Fields rendered in the detail hero — skipped by the generic section renderer. */
