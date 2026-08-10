@@ -1,6 +1,8 @@
 import rawV1 from "./design-library.json";
 import rawV2 from "./design-library-v9.json";
 import rawV3 from "./design-library-v10.json";
+import rawM1 from "./motion-v1.json";
+import rawM2 from "./motion-v2.json";
 
 export type ColorSystem = Record<string, unknown> & {
   primary: string;
@@ -33,6 +35,7 @@ export type LibraryVersion = {
   slug: string;
   label: string;
   tagline: string;
+  group: string;
   meta: RawLibrary["library"];
   systems: DesignSystem[];
   raw: RawLibrary;
@@ -45,12 +48,14 @@ const build = (
   label: string,
   tagline: string,
   raw: unknown,
+  group = "设计系统",
 ): LibraryVersion => {
   const data = raw as RawLibrary;
   return {
     slug,
     label,
     tagline,
+    group,
     meta: data.library,
     systems: data.design_systems,
     raw: data,
@@ -62,6 +67,8 @@ export const VERSIONS: LibraryVersion[] = [
   build("v1", "v1.0", "Design DNA Library — 基础设计基因库", rawV1),
   build("v2", "v2.0", "Awwwards Ultimate — 可落地执行层", rawV2),
   build("v3", "v3.0", "Premium Web Experience OS™ — 东方奢华体验系统", rawV3),
+  build("m1", "动效 v1.0", "Motion Design System — 自然物理动效基因库", rawM1, "动效系统"),
+  build("m2", "动效 v2.0", "Motion Design System — 电影级空间动效系统", rawM2, "动效系统"),
 ];
 
 export const DEFAULT_VERSION = VERSIONS[0]!.slug;
@@ -90,22 +97,34 @@ export const keywordsOf = (v: LibraryVersion) =>
 const obj = (v: unknown) => (v && typeof v === "object" ? (v as Record<string, unknown>) : undefined);
 
 export const nameOf = (d: DesignSystem): string =>
-  d.name ?? (obj(d["identity"])?.["name"] as string) ?? d.id;
+  d.name ??
+  (obj(d["identity"])?.["name"] as string) ??
+  (obj(d["identity"])?.["name_cn"] as string) ??
+  (obj(d["identity"])?.["name_en"] as string) ??
+  d.id;
 
 export const englishOf = (d: DesignSystem): string | undefined =>
-  obj(d["identity"])?.["english"] as string | undefined;
+  (obj(d["identity"])?.["english"] as string | undefined) ??
+  (obj(d["identity"])?.["name_en"] as string | undefined);
 
 export const categoryOf = (d: DesignSystem): string | undefined =>
-  obj(d["identity"])?.["category"] as string | undefined;
+  [obj(d["identity"])?.["category"], obj(d["identity"])?.["scene_type"]]
+    .filter(Boolean)
+    .join(" · ") || undefined;
 
 export const summaryOf = (d: DesignSystem): string =>
   d.design_philosophy ??
   (obj(d["philosophy"])?.["core"] as string) ??
+  (obj(d["identity"])?.["description"] as string) ??
+  (obj(d["design_intent"])?.["core_idea"] as string) ??
   (obj(d["identity"])?.["position"] as string) ??
   "";
 
 export const positioningOf = (d: DesignSystem): string =>
-  d.visual_positioning ?? (obj(d["identity"])?.["position"] as string) ?? summaryOf(d);
+  d.visual_positioning ??
+  (obj(d["identity"])?.["position"] as string) ??
+  (obj(d["design_intent"])?.["core_idea"] as string) ??
+  summaryOf(d);
 
 export const keywordsOfDesign = (d: DesignSystem): string[] =>
   d.design_keywords ?? ((obj(d["identity"])?.["keywords"] as string[]) ?? []);
@@ -186,6 +205,19 @@ export const FIELD_LABELS: Record<string, string> = {
   sound_design: "声音设计 Sound Design",
   responsive: "响应式 Responsive",
   conversion: "转化 Conversion",
+  design_intent: "设计意图 Design Intent",
+  environment_system: "环境系统 Environment System",
+  material_system_motion: "材质系统 Material System",
+  form_system: "形态系统 Form System",
+  motion_system: "运动系统 Motion System",
+  camera_system: "镜头系统 Camera System",
+  lighting_system: "光影系统 Lighting System",
+  interaction_system: "交互系统 Interaction System",
+  technical_system: "技术系统 Technical System",
+  animation_token: "动效令牌 Animation Token",
+  application_context: "应用场景 Application Context",
+  constraints: "约束条件 Constraints",
+  generation_prompt: "生成提示词 Generation Prompt",
 };
 
 export const labelOf = (key: string) =>
