@@ -209,7 +209,6 @@ export const FIELD_LABELS: Record<string, string> = {
   environment_system: "环境系统 Environment System",
   material_system_motion: "材质系统 Material System",
   form_system: "形态系统 Form System",
-  motion_system: "运动系统 Motion System",
   camera_system: "镜头系统 Camera System",
   lighting_system: "光影系统 Lighting System",
   interaction_system: "交互系统 Interaction System",
