@@ -107,6 +107,7 @@ export function LibraryBrowser({ version }: { version: LibraryVersion }) {
                 index={i}
                 version={version.slug}
                 optimizationFramework={version.optimizationFramework}
+                showColors={version.group !== "动效系统"}
               />
             ))}
           </div>
