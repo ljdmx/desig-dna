@@ -50,13 +50,14 @@ export function LibraryBrowser({ version }: { version: LibraryVersion }) {
 
       <main className="mx-auto max-w-7xl px-5">
         <section className="animate-enter-up py-12 sm:py-16">
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-soft/80">
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 font-mono text-[10px] uppercase tracking-[0.28em] text-accent-soft">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             {version.meta.name} · {version.meta.version}
-          </p>
-          <h1 className="mt-3 max-w-3xl font-display text-[28px] leading-[1.3] text-foreground sm:text-[40px]">
-            探索 {version.systems.length} 个顶级设计系统
+          </span>
+          <h1 className="mt-5 max-w-3xl font-display text-[30px] leading-[1.25] tracking-tight text-foreground sm:text-[46px]">
+            探索 {version.systems.length} 个{version.group}
           </h1>
-          <p className="mt-3 max-w-xl text-[14px] leading-[1.6] text-muted-foreground">
+          <p className="mt-4 max-w-2xl text-[15px] leading-[1.7] text-muted-foreground">
             {version.tagline}，支持 Markdown / JSON / 色值一键复制。
           </p>
 
