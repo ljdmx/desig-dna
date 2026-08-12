@@ -69,19 +69,19 @@ function DesignDetail() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-30 border-b border-border bg-background/80 backdrop-blur-xl">
-        <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4">
+      <header className="sticky top-0 z-30 border-b border-border bg-background/70 backdrop-blur-xl">
+        <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-5 sm:px-10">
           <Link
             to="/version/$version"
             params={{ version: versionSlug }}
-            className="inline-flex min-w-0 items-center gap-2 text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground"
+            className="inline-flex min-w-0 items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-muted-foreground transition-colors duration-300 hover:text-foreground"
           >
             <ArrowLeft className="h-4 w-4 shrink-0" />
             <span className="truncate">返回 {versionLabel} 全部方案</span>
           </Link>
           <ThemeToggle />
         </div>
-        <div className="mx-auto flex max-w-6xl flex-wrap gap-2 px-5 pb-4">
+        <div className="mx-auto flex max-w-6xl flex-wrap gap-2 px-6 pb-5 sm:px-10">
           <CopyButton
             variant="solid"
             label="复制 Markdown"
@@ -103,14 +103,14 @@ function DesignDetail() {
         </div>
       </header>
 
-      <div className="mx-auto max-w-6xl px-5 lg:flex lg:gap-12">
+      <div className="mx-auto max-w-6xl px-6 sm:px-10 lg:flex lg:gap-16">
         <nav className="hidden shrink-0 lg:block lg:w-52">
-          <ul className="sticky top-40 space-y-2 py-16 text-xs">
+          <ul className="sticky top-40 space-y-3 py-24 text-[11px] uppercase tracking-[0.14em]">
             {navKeys.map((k) => (
               <li key={k}>
                 <a
                   href={`#${slug(k)}`}
-                  className="block truncate text-muted-foreground transition-colors duration-200 hover:text-accent-soft"
+                  className="block truncate text-muted-foreground transition-colors duration-300 hover:text-accent"
                 >
                   {labelOf(k)}
                 </a>
@@ -119,33 +119,34 @@ function DesignDetail() {
           </ul>
         </nav>
 
-        <main className="min-w-0 flex-1 pb-24">
-          <section className="animate-enter-up py-16">
-            <span className="font-mono text-xs tracking-[0.25em] text-accent-soft">
+        <main className="min-w-0 flex-1 pb-32">
+          <section className="animate-enter-up ink-wash py-24 sm:py-32">
+            <span className="inline-flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.4em] text-accent">
+              <span className="h-px w-8 bg-accent" />
               {design.id} · {versionLabel}
             </span>
-            <h1 className="mt-5 font-display text-[32px] leading-[1.4] text-foreground sm:text-[44px]">
+            <h1 className="mt-8 font-ink text-[38px] font-medium leading-[1.2] tracking-[0.02em] text-foreground sm:text-[64px]">
               {nameOf(design)}
             </h1>
             {(englishOf(design) || categoryOf(design)) && (
-              <p className="mt-2 font-mono text-[12px] tracking-[0.15em] text-accent-soft">
+              <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
                 {[englishOf(design), categoryOf(design)].filter(Boolean).join(" · ")}
               </p>
             )}
-            <p className="mt-5 max-w-2xl text-[15px] leading-[1.6] text-muted-foreground">
+            <p className="mt-8 max-w-2xl border-l border-border pl-6 text-[15px] leading-[2] text-muted-foreground">
               {positioningOf(design)}
             </p>
-            <div className="mt-6 flex flex-wrap gap-1.5">
+            <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2">
               {keywordsOfDesign(design).map((k) => (
                 <span
                   key={k}
-                  className="rounded-full bg-surface-raised px-2.5 py-1 text-[12px] font-medium text-muted-foreground"
+                  className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground"
                 >
                   {k}
                 </span>
               ))}
             </div>
-            <ColorSwatchRow colors={swatchesOf(design)} className="mt-8 h-2" />
+            <ColorSwatchRow colors={swatchesOf(design)} className="mt-12" />
           </section>
 
           {sectionKeys.map((key) => (
@@ -183,23 +184,25 @@ function ColorSystemBlock({ data }: { data: Record<string, unknown> }) {
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-px bg-border sm:grid-cols-4">
         {swatches.map(([k, v], i) => (
           <button
             key={`${k}-${i}`}
             type="button"
             onClick={() => navigator.clipboard?.writeText(v)}
-            className="overflow-hidden rounded-xl border border-border text-left transition-transform duration-200 hover:-translate-y-1"
+            className="group overflow-hidden bg-background text-left transition-transform duration-500 hover:-translate-y-1"
           >
-            <span className="block h-16 w-full" style={{ backgroundColor: v }} />
-            <span className="block bg-surface px-3 py-2">
-              <span className="block font-mono text-[11px] text-muted-foreground">{k}</span>
+            <span className="block h-24 w-full" style={{ backgroundColor: v }} />
+            <span className="block px-3 py-3">
+              <span className="block font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                {k}
+              </span>
               <span className="block font-mono text-[13px] text-foreground">{v}</span>
             </span>
           </button>
         ))}
       </div>
-      <div className="mt-5">
+      <div className="mt-8">
         <DataValue value={rest} />
       </div>
     </>
@@ -208,11 +211,11 @@ function ColorSystemBlock({ data }: { data: Record<string, unknown> }) {
 
 function ScoreBlock({ data }: { data: Record<string, string> }) {
   return (
-    <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
+    <div className="grid grid-cols-2 gap-px bg-border sm:grid-cols-5">
       {Object.entries(data).map(([k, v]) => (
-        <div key={k} className="rounded-xl border border-border bg-surface p-4 text-center">
-          <div className="font-display text-2xl text-foreground">{String(v)}</div>
-          <div className="mt-1 font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
+        <div key={k} className="bg-background p-6 text-center">
+          <div className="font-display text-3xl text-foreground">{String(v)}</div>
+          <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
             {k}
           </div>
         </div>
