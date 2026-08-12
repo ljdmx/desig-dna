@@ -8,11 +8,11 @@ export function ColorSwatchRow({
   className?: string;
 }) {
   return (
-    <div className={cn("flex gap-2", className)}>
+    <div className={cn("flex", className)}>
       {colors.slice(0, 5).map(([k, hex], i) => (
         <span
           key={`${k}-${i}`}
-          className="h-8 w-8 rounded-lg ring-1 ring-border/30 shadow-sm transition-transform duration-200 hover:scale-110"
+          className="h-10 flex-1 transition-transform duration-500 hover:-translate-y-1"
           style={{ backgroundColor: hex }}
           title={`${k} ${hex}`}
         />

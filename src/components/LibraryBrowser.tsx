@@ -36,11 +36,11 @@ export function LibraryBrowser({ version }: { version: LibraryVersion }) {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-30 border-b border-border bg-background/80 backdrop-blur-xl">
-        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4">
+      <header className="sticky top-0 z-30 border-b border-border bg-background/70 backdrop-blur-xl">
+        <div className="mx-auto grid max-w-[92rem] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-5 sm:px-10">
           <div className="flex min-w-0 items-center gap-3">
             <Logo className="h-7 w-7 shrink-0" />
-            <span className="truncate font-display text-sm tracking-wide text-foreground">
+            <span className="truncate font-display text-[15px] tracking-[0.24em] uppercase text-foreground">
               Design DNA Library
             </span>
           </div>
@@ -48,36 +48,46 @@ export function LibraryBrowser({ version }: { version: LibraryVersion }) {
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl px-5">
-        <section className="animate-enter-up py-12 sm:py-16">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 font-mono text-[10px] uppercase tracking-[0.28em] text-accent-soft">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            {version.meta.name} · {version.meta.version}
-          </span>
-          <h1 className="mt-5 max-w-3xl font-display text-[30px] leading-[1.25] tracking-tight text-foreground sm:text-[46px]">
-            探索 {version.systems.length} 个{version.group}
-          </h1>
-          <p className="mt-4 max-w-2xl text-[15px] leading-[1.7] text-muted-foreground">
-            {version.tagline}，支持 Markdown / JSON / 色值一键复制。
-          </p>
+      <main className="mx-auto max-w-[92rem] px-6 sm:px-10">
+        <section className="animate-enter-up ink-wash relative py-20 sm:py-32">
+          <div className="grid gap-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-end">
+            <div className="min-w-0">
+              <span className="inline-flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.4em] text-accent">
+                <span className="h-px w-8 bg-accent" />
+                {version.meta.name} · {version.meta.version}
+              </span>
+              <h1 className="mt-8 font-display text-[46px] font-light leading-[1.05] tracking-tight text-foreground sm:text-[86px]">
+                {version.group}
+                <span className="block text-muted-foreground">
+                  <span className="font-mono text-[0.42em] align-middle tracking-[0.2em]">
+                    {String(version.systems.length).padStart(2, "0")}
+                  </span>{" "}
+                  Systems
+                </span>
+              </h1>
+            </div>
+            <p className="max-w-md border-l border-border pl-6 text-[15px] leading-[2] text-muted-foreground lg:pb-4">
+              {version.tagline}，支持 Markdown / JSON / 色值一键复制。
+            </p>
+          </div>
 
-          <div className="mt-6">
+          <div className="mt-16">
             <VersionTabs current={version.slug} />
           </div>
 
-          <div className="mt-8 max-w-lg">
+          <div className="mt-12 max-w-xl">
             <label className="relative block">
-              <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <Search className="pointer-events-none absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="搜索方案名称、关键词或设计哲学…"
-                className="w-full rounded-full border border-border bg-surface py-2.5 pl-11 pr-4 text-sm text-foreground placeholder:text-muted-foreground transition-colors duration-200 focus:border-accent/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="w-full border-0 border-b border-border bg-transparent py-3 pl-7 pr-2 text-[15px] text-foreground placeholder:text-muted-foreground/70 transition-colors duration-300 focus:border-accent focus:outline-none"
               />
             </label>
           </div>
 
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
             <FilterChip active={keyword === null} onClick={() => setKeyword(null)}>
               全部
             </FilterChip>
@@ -95,11 +105,11 @@ export function LibraryBrowser({ version }: { version: LibraryVersion }) {
 
         <div className="gradient-rule" />
 
-        <section className="py-12">
-          <p className="mb-8 font-mono text-xs tracking-[0.2em] text-muted-foreground">
-            {results.length} / {version.systems.length} SYSTEMS
+        <section className="py-16">
+          <p className="mb-10 font-mono text-[11px] tracking-[0.35em] text-muted-foreground">
+            {String(results.length).padStart(2, "0")} / {version.systems.length} SYSTEMS
           </p>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 xl:grid-cols-3">
             {results.map((d, i) => (
               <DesignCard
                 key={d.id}
@@ -112,7 +122,7 @@ export function LibraryBrowser({ version }: { version: LibraryVersion }) {
             ))}
           </div>
           {results.length === 0 && (
-            <p className="py-20 text-center text-sm text-muted-foreground">
+            <p className="py-24 text-center font-display text-lg text-muted-foreground">
               没有匹配的设计方案，试试其他关键词。
             </p>
           )}
@@ -120,11 +130,13 @@ export function LibraryBrowser({ version }: { version: LibraryVersion }) {
       </main>
 
       <footer className="mt-12 border-t border-border">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-10 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <span>
+        <div className="mx-auto flex max-w-[92rem] flex-col gap-3 px-6 py-16 text-[11px] uppercase tracking-[0.24em] text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-10">
+          <span className="font-mono">
             {version.meta.name} {version.meta.version}
           </span>
-          <span>为全球顶级设计师与品牌打造的高级设计系统展示平台</span>
+          <span className="tracking-[0.18em] normal-case">
+            为全球顶级设计师与品牌打造的高级设计系统展示平台
+          </span>
         </div>
       </footer>
     </div>
@@ -145,10 +157,10 @@ function FilterChip({
       type="button"
       onClick={onClick}
       className={
-        "rounded-full border px-3 py-1.5 text-[12px] font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring " +
+        "relative pb-1 text-[12px] tracking-[0.08em] transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-px after:bg-accent after:transition-all after:duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring " +
         (active
-          ? "border-transparent bg-gradient-to-r from-accent to-accent-soft text-accent-foreground"
-          : "border-border bg-surface text-muted-foreground hover:border-accent/50 hover:text-foreground")
+          ? "text-foreground after:w-full"
+          : "text-muted-foreground after:w-0 hover:text-foreground hover:after:w-full")
       }
     >
       {children}

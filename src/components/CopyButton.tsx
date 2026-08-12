@@ -38,11 +38,11 @@ export function CopyButton({
         window.setTimeout(() => setDone(false), 1600);
       }}
       className={cn(
-        "inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium tracking-wide",
-        "transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+        "inline-flex items-center gap-2 px-4 py-2 text-[11px] uppercase tracking-[0.18em]",
+        "transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
         variant === "solid"
-          ? "bg-gradient-to-r from-accent to-accent-soft text-accent-foreground hover:opacity-90"
-          : "border border-border bg-surface text-foreground hover:border-accent/60 hover:bg-surface-raised",
+          ? "bg-foreground text-background hover:opacity-85"
+          : "border border-border text-muted-foreground hover:border-accent hover:text-foreground",
         className,
       )}
       aria-label={label}
