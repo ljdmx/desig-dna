@@ -49,7 +49,7 @@ export function LibraryBrowser({ version }: { version: LibraryVersion }) {
       </header>
 
       <main className="mx-auto max-w-[92rem] px-6 sm:px-10">
-        <section className="animate-enter-up ink-wash relative py-24 text-center sm:py-36">
+        <section className="animate-enter-up ink-wash relative pb-16 pt-24 text-center sm:pb-20 sm:pt-32">
           <div className="mx-auto flex max-w-3xl flex-col items-center">
             <span className="inline-flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.42em] text-accent">
               <span className="h-px w-10 bg-accent/60" />
