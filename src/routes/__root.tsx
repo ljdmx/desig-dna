@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Premium Web Design DNA Library" },
+      { title: "Design DNA Library" },
       { name: "description", content: "32 个顶级 Web 设计系统的沉浸式数字美术馆。" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

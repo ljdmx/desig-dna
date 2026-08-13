@@ -18,7 +18,7 @@ export const Route = createFileRoute("/version/$version")({
         ],
       };
     }
-    const title = `Premium Web Experience OS™ ${loaderData.label} · 设计系统库`;
+    const title = `${loaderData.label} · Design DNA Library`;
     return {
       meta: [
         { title },
