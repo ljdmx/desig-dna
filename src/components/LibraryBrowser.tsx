@@ -39,7 +39,7 @@ export function LibraryBrowser({ version }: { version: LibraryVersion }) {
       <header className="sticky top-0 z-30 border-b border-border bg-background/70 backdrop-blur-xl">
         <div className="mx-auto grid max-w-[92rem] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-5 sm:px-10">
           <div className="flex min-w-0 items-center gap-3">
-            <Logo className="h-7 w-7 shrink-0" />
+            <Logo className="h-7 w-7 shrink-0 text-foreground" />
             <span className="truncate font-display text-[15px] tracking-[0.24em] uppercase text-foreground">
               Design DNA Library
             </span>
@@ -49,45 +49,53 @@ export function LibraryBrowser({ version }: { version: LibraryVersion }) {
       </header>
 
       <main className="mx-auto max-w-[92rem] px-6 sm:px-10">
-        <section className="animate-enter-up ink-wash relative py-20 sm:py-32">
-          <div className="grid gap-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-end">
-            <div className="min-w-0">
-              <span className="inline-flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.4em] text-accent">
-                <span className="h-px w-8 bg-accent" />
-                {version.meta.name} · {version.meta.version}
+        <section className="animate-enter-up ink-wash relative py-24 text-center sm:py-36">
+          <div className="mx-auto flex max-w-3xl flex-col items-center">
+            <span className="inline-flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.42em] text-accent">
+              <span className="h-px w-10 bg-accent/60" />
+              {version.meta.name} · {version.meta.version}
+              <span className="h-px w-10 bg-accent/60" />
+            </span>
+
+            <h1 className="mt-10 font-display text-[40px] font-light leading-[1.06] tracking-[-0.01em] text-foreground sm:text-[76px]">
+              Design DNA Library
+            </h1>
+
+            <p className="mt-6 font-ink text-[15px] tracking-[0.34em] text-muted-foreground sm:text-[17px]">
+              {version.group}
+            </p>
+
+            <div className="mt-10 flex items-center gap-5 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+              <span className="h-px w-12 bg-border" />
+              <span className="text-foreground">
+                {String(version.systems.length).padStart(2, "0")}
               </span>
-              <h1 className="mt-8 font-display text-[46px] font-light leading-[1.05] tracking-tight text-foreground sm:text-[86px]">
-                {version.group}
-                <span className="block text-muted-foreground">
-                  <span className="font-mono text-[0.42em] align-middle tracking-[0.2em]">
-                    {String(version.systems.length).padStart(2, "0")}
-                  </span>{" "}
-                  Systems
-                </span>
-              </h1>
+              <span>Systems</span>
+              <span className="h-px w-12 bg-border" />
             </div>
-            <p className="max-w-md border-l border-border pl-6 text-[15px] leading-[2] text-muted-foreground lg:pb-4">
+
+            <p className="mt-10 max-w-xl text-[14px] leading-[2.1] text-muted-foreground">
               {version.tagline}，支持 Markdown / JSON / 色值一键复制。
             </p>
           </div>
 
-          <div className="mt-16">
+          <div className="mt-16 flex justify-center">
             <VersionTabs current={version.slug} />
           </div>
 
-          <div className="mt-12 max-w-xl">
+          <div className="mx-auto mt-14 max-w-xl">
             <label className="relative block">
               <Search className="pointer-events-none absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="搜索方案名称、关键词或设计哲学…"
-                className="w-full border-0 border-b border-border bg-transparent py-3 pl-7 pr-2 text-[15px] text-foreground placeholder:text-muted-foreground/70 transition-colors duration-300 focus:border-accent focus:outline-none"
+                className="w-full border-0 border-b border-border bg-transparent py-3 pl-7 pr-2 text-center text-[15px] text-foreground placeholder:text-muted-foreground/70 transition-colors duration-300 focus:border-accent focus:outline-none"
               />
             </label>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3">
             <FilterChip active={keyword === null} onClick={() => setKeyword(null)}>
               全部
             </FilterChip>
