@@ -29,7 +29,7 @@ export function DesignCard({
     <Link
       to="/design/$version/$id"
       params={{ version, id: design.id }}
-      className="group relative block animate-enter-up bg-background p-8 transition-colors duration-500 hover:bg-surface focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring sm:p-10"
+      className="group relative block animate-enter-up p-8 transition-colors duration-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring sm:p-10"
       style={{ animationDelay: `${Math.min(index, 12) * 40}ms` }}
     >
       <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100 bg-[radial-gradient(90%_70%_at_50%_0%,color-mix(in_oklab,var(--foreground)_8%,transparent),transparent_70%)]" />
